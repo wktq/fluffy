@@ -1,0 +1,30 @@
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+  padding: 10px 12px;
+  border-top: 1px solid #eee;
+  cursor: pointer;
+
+  .icon {
+    font-size: 16px;
+    line-height: 14px;
+    color: #333;
+  }
+}
+
+.table.dark>tbody>tr>td, .table.dark>tbody>tr>th, .table.dark>tfoot>tr>td, .table.dark>tfoot>tr>th, .table.dark>thead>tr>td, .table.dark>thead>tr>th {
+  border-top: 1px solid #222;
+  background-color: #333;
+  color: #ddd;
+
+  .icon {
+    color: #fff;
+  }
+}
+
+.table>thead>tr>th {
+  border-bottom: 2px solid #eee;
+}
+
+.table.dark>thead>tr>th {
+  border-bottom: 2px solid #222;
+  color: #fff;
+}

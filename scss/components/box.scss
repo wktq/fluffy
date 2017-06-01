@@ -1,0 +1,16 @@
+.magic-box {
+
+}
+
+
+.wrap-box {
+  position: relative;
+  width: 100%;
+}
+
+.centered {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

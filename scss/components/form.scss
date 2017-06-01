@@ -1,0 +1,25 @@
+.fluffy-form {
+  .fluffy-form-title {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+}
+
+input.form-control, textarea.form-control, select.form-control {
+  border: 1px solid #d8d8d8;
+  box-shadow: none;
+  margin-bottom:20px;
+  @include setPrefix(border-radius, 2px);
+  @include setPrefix(transition, all .2s ease-in-out);
+
+  &:focus {
+    outline: none;
+    border: 1px solid #448AFF;
+    box-shadow: none;
+  }
+}
+
+textarea.form-control {
+    min-height: 12em;
+}

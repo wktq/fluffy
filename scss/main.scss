@@ -1,8 +1,43 @@
-// include another .scss file from a sub-directory
-@import './about/about.scss';
+$set-prefix: '' , -moz- , -webkit-, -o-;
 
-body {
-    a {
-        color: magenta;
+@mixin setPrefix($name, $value) {
+    @each $prefix in $set-prefix {
+        #{$prefix}#{$name}: $value;
     }
+}
+
+// include another .scss file from a sub-directory
+@import './components/card.scss';
+@import './components/button.scss';
+@import './components/header.scss';
+@import './components/list.scss';
+@import './components/form.scss';
+@import './components/box.scss';
+@import './components/table.scss';
+@import './components/code.scss';
+body {
+  color: #353535;
+  background-color: #F6F9FC;
+  font-family: 'Poppins';
+}
+
+
+.logo {
+  font-family: 'Coda';
+  font-size: 24px;
+}
+
+.logo-icon {
+  height: 18px;
+  width: 18px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background-color: maroon;
+  display: inline-block;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#bc1ee8+0,0fb4e7+100 */
+  background: rgb(188,30,232); /* Old browsers */
+  background: -moz-linear-gradient(-45deg, rgba(188,30,232,1) 0%, rgba(15,180,231,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, rgba(188,30,232,1) 0%,rgba(15,180,231,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, rgba(188,30,232,1) 0%,rgba(15,180,231,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bc1ee8', endColorstr='#0fb4e7',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }

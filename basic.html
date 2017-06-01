@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Fluffy</title>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./dist/main.bundle.css">
+    <link href="https://fonts.googleapis.com/css?family=Coda|Poppins" rel="stylesheet">
+
+    <style media="screen">
+      .icon {
+        margin-right: 0.8rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header fixed">
+      <div class="header-content">
+        <span class="logo-icon"></span><span class="logo">fluffy.css</span>
+      </div>
+    </header>
+    <div class="container" style="padding-top: 66px">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card fixed-content">
+            <div class="card-head">
+              Content Menu
+            </div>
+            <ul class="card-menu">
+              <ul class="list has-child child-open">
+                <a class="list-item list-parent"><i class="icon ion-checkmark"></i>Basic</a>
+                <a href="basic.html#flex-heading" class="list-item list-child">Flex Heading</a>
+                <a href="basic.html#buttons" class="list-item list-child">Buttons</a>
+                <a href="basic.html#forms" class="list-item list-child">Forms</a>
+                <a href="basic.html#lists" class="list-item list-child">Lists</a>
+                <a href="basic.html#tables" class="list-item list-child">Tables</a>
+              </ul>
+            </ul>
+            <ul class="card-menu">
+              <ul class="list has-child">
+                <a class="list-item list-parent"><i class="icon ion-settings"></i>Element</a>
+                <a class="list-item list-child">Cards</a>
+                <a class="list-item list-child">Header & Footer</a>
+                <a class="list-item list-child">Vertical Navs</a>
+                <a class="list-item list-child">Pagenations</a>
+                <a class="list-item list-child">Calendar</a>
+                <a class="list-item list-child">Progress Bar</a>
+                <a class="list-item list-child">Breadcrumbs</a>
+                <a class="list-item list-child">Magic box</a>
+                <a class="list-item list-child">Loading</a>
+              </ul>
+            </ul>
+            <ul class="card-menu">
+              <ul class="list has-child">
+                <a class="list-item list-parent"><i class="icon ion-star"></i>Special</a>
+                <a class="list-item list-child">iPhone mockup</a>
+                <a class="list-item list-child">Tweet</a>
+                <a class="list-item list-child">Wizard</a>
+                <a class="list-item list-child">Avatars</a>
+                <a class="list-item list-child">Auto Complete</a>
+              </ul>
+            </ul>
+            <ul class="card-menu">
+              <ul class="list has-child">
+                <a class="list-item list-parent"><i class="icon ion-film-marker"></i>Animations</a>
+                <a class="list-item list-child">Fade</a>
+                <a class="list-item list-child">Slide</a>
+                <a class="list-item list-child">Zoom</a>
+                <a class="list-item list-child">Blur</a>
+                <a class="list-item list-child">Raise</a>
+                <a class="list-item list-child">Pulse</a>
+              </ul>
+            </ul>
+            <ul class="card-menu">
+              <ul class="list has-child">
+                <a class="list-item list-parent"><i class="icon ion-social-javascript"></i>JavaScript</a>
+                <a class="list-item list-child">Sidemenu</a>
+                <a class="list-item list-child">Dropdown</a>
+                <a class="list-item list-child">Modal</a>
+                <a class="list-item list-child">Popover</a>
+                <a class="list-item list-child">Slider</a>
+                <a class="list-item list-child">Tabs</a>
+              </ul>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="card solid">
+            <div class="card-head">
+              Basic
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <h1 id="flex-heading">Flex Heading</h1>
+                  <h5>All Headings are completely flexible.</h5>
+                </div>
+                <div class="col-md-12">
+                  <h1>This is Important Word.</h1>
+                  <h2>This is Important Word.</h2>
+                  <h3>This is Important Word.</h3>
+                  <h4>This is Important Word.</h4>
+                  <h5>This is Important Word.</h5>
+                  <h6>This is Important Word.</h6>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <h1 id="buttons">Buttons</h1>
+                  <h5>Clean and Modern design buttons here.</h5>
+                </div>
+                <div class="col-md-12">
+                  <button class="btn red">Red Button</button>
+                  <button class="btn pink">Pink Button</button>
+                  <button class="btn purple">Purple Button</button>
+                  <button class="btn blue">Blue Button</button>
+                  <button class="btn green">Green Button</button>
+                  <button class="btn orange">Orange Button</button>
+                  <button class="btn dark">Dark Button</button>
+                  <button class="btn black">Black Button</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <h1 id="forms">Forms</h1>
+                  <h5>Simple and Clean Form</h5>
+                </div>
+                <div class="row">
+                  <div class="wrap-box" style="height: 800px">
+                    <div class="col-md-8 centered">
+                      <div class="card">
+                        <div class="card-body">
+                          <form class="fluffy-form" action="index.html" method="post">
+                            <h5 class="fluffy-form-title"><i class="icon ion-checkmark-circled"></i>Register Form</h5>
+                            <label>Email</label>
+                            <input class="form-control" type="email" name="" value="" placeholder="somebody@somewhare.com">
+                            <label>Password</label>
+                            <input class="form-control" type="password" name="" value="">
+                            <label>Reason</label>
+                            <textarea class="form-control" type="text" name="" value=""></textarea>
+                            <label>Company you like</label>
+                            <select class="form-control" name="">
+                              <option value="1">Google</option>
+                              <option value="2">Apple</option>
+                              <option value="3">Microsoft</option>
+                            </select>
+                            <button type="submit" class="btn-block red">Submit</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <h1 id="forms">Lists</h1>
+                  <h5>List can be used Awesome Menu, Index of Items.</h5>
+                </div>
+                <div class="row">
+                  <div class="wrap-box" style="height: 500px">
+                    <div class="col-md-8 centered">
+                      <div class="card">
+                        <ul class="card-menu">
+                          <ul class="list">
+                            <a class="list-item list-parent"><i class="icon ion-checkmark"></i>Basic</a>
+                            <a class="list-item list-parent"><i class="icon ion-checkmark"></i>Basic</a>
+                            <a class="list-item list-parent"><i class="icon ion-checkmark"></i>Basic</a>
+                            <a class="list-item list-parent"><i class="icon ion-checkmark"></i>Basic</a>
+                            <a class="list-item list-parent"><i class="icon ion-checkmark"></i>Basic</a>
+                            <a class="list-item list-parent"><i class="icon ion-checkmark"></i>Basic</a>
+                          </ul>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <h1 id="tables">Tables</h1>
+                </div>
+                <div class="col-md-12">
+                  <h5>Default Table</h5>
+                  <div class="card">
+                		<table class="table table-hover">
+                			<thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Code</th>
+                          <th>State/City</th>
+                          <th>Incharge Name</th>
+                          <th>Mobile</th>
+                          <th>Status</th>
+                          <th>Timesheet</th>
+                          <th></th>
+                        </tr>
+                			</thead>
+                			<tbody>
+                        <tr>
+                          <td data-title="Firm Name">Giacomo Guilizzoni</td>
+                          <td data-title="Firm Code">JONEA140</td>
+                          <td data-title="Firm State/City">Melbourne</td>
+                          <td data-title="Firm Incharge Name">Giacomo Guilizzoni</td>
+                          <td data-title="Mobile">9625145236</td>
+                          <td data-title="Active">Active</td>
+                          <td data-title="Timesheet">Timesheet</td>
+                          <td data-title=""><a href="javascript:void(0);"><i class="icon ion-android-more-vertical"></i></a></td>
+                        </tr>
+                        <tr>
+                          <td data-title="Firm Name">Giacomo Guilizzoni</td>
+                          <td data-title="Firm Code">JONEA140</td>
+                          <td data-title="Firm State/City">Melbourne</td>
+                          <td data-title="Firm Incharge Name">Giacomo Guilizzoni</td>
+                          <td data-title="Mobile">9625145236</td>
+                          <td data-title="Active">Active</td>
+                          <td data-title="Timesheet">Timesheet</td>
+                          <td data-title=""><a href="javascript:void(0);"><i class="icon ion-android-more-vertical"></i></a></td>
+                        </tr>
+                        <tr>
+                          <td data-title="Firm Name">Giacomo Guilizzoni</td>
+                          <td data-title="Firm Code">JONEA140</td>
+                          <td data-title="Firm State/City">Melbourne</td>
+                          <td data-title="Firm Incharge Name">Giacomo Guilizzoni</td>
+                          <td data-title="Mobile">9625145236</td>
+                          <td data-title="Active">Active</td>
+                          <td data-title="Timesheet">Timesheet</td>
+                          <td data-title=""><a href="javascript:void(0);"><i class="icon ion-android-more-vertical"></i></a></td>
+                        </tr>
+                        <tr>
+                          <td data-title="Firm Name">Giacomo Guilizzoni</td>
+                          <td data-title="Firm Code">JONEA140</td>
+                          <td data-title="Firm State/City">Melbourne</td>
+                          <td data-title="Firm Incharge Name">Giacomo Guilizzoni</td>
+                          <td data-title="Mobile">9625145236</td>
+                          <td data-title="Active">Active</td>
+                          <td data-title="Timesheet">Timesheet</td>
+                          <td data-title=""><a href="javascript:void(0);"><i class="icon ion-android-more-vertical"></i></a></td>
+                        </tr>
+                        <tr>
+                          <td data-title="Firm Name">Giacomo Guilizzoni</td>
+                          <td data-title="Firm Code">JONEA140</td>
+                          <td data-title="Firm State/City">Melbourne</td>
+                          <td data-title="Firm Incharge Name">Giacomo Guilizzoni</td>
+                          <td data-title="Mobile">9625145236</td>
+                          <td data-title="Active">Active</td>
+                          <td data-title="Timesheet">Timesheet</td>
+                          <td data-title=""><a href="javascript:void(0);"><i class="icon ion-android-more-vertical"></i></a></td>
+                        </tr>
+                        <tr>
+                          <td data-title="Firm Name">Giacomo Guilizzoni</td>
+                          <td data-title="Firm Code">JONEA140</td>
+                          <td data-title="Firm State/City">Melbourne</td>
+                          <td data-title="Firm Incharge Name">Giacomo Guilizzoni</td>
+                          <td data-title="Mobile">9625145236</td>
+                          <td data-title="Active">Active</td>
+                          <td data-title="Timesheet">Timesheet</td>
+                          <td data-title=""><a href="javascript:void(0);"><i class="icon ion-android-more-vertical"></i></a></td>
+                        </tr>
+                        <tr>
+                          <td data-title="Firm Name">Giacomo Guilizzoni</td>
+                          <td data-title="Firm Code">JONEA140</td>
+                          <td data-title="Firm State/City">Melbourne</td>
+                          <td data-title="Firm Incharge Name">Giacomo Guilizzoni</td>
+                          <td data-title="Mobile">9625145236</td>
+                          <td data-title="Active">Active</td>
+                          <td data-title="Timesheet">Timesheet</td>
+                          <td data-title=""><a href="javascript:void(0);"><i class="icon ion-android-more-vertical"></i></a></td>
+                        </tr>
+                			</tbody>
+                		</table>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <h5>Dark Table</h5>
+                  <div class="card">
+                    <table class="table dark table-hover">
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Code</th>
+                          <th>State/City</th>
+                          <th>Incharge Name</th>
+                          <th>Mobile</th>
+                          <th>Status</th>
+                          <th>Timesheet</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td data-title="Firm Name">Giacomo Guilizzoni</td>
+                          <td data-title="Firm Code">JONEA140</td>
+                          <td data-title="Firm State/City">Melbourne</td>
+                          <td data-title="Firm Incharge Name">Giacomo Guilizzoni</td>
+                          <td data-title="Mobile">9625145236</td>
+                          <td data-title="Active">Active</td>
+                          <td data-title="Timesheet">Timesheet</td>
+                          <td data-title=""><a href="javascript:void(0);"><i class="icon ion-android-more-vertical"></i></a></td>
+                        </tr>
+                        <tr>
+                          <td data-title="Firm Name">Giacomo Guilizzoni</td>
+                          <td data-title="Firm Code">JONEA140</td>
+                          <td data-title="Firm State/City">Melbourne</td>
+                          <td data-title="Firm Incharge Name">Giacomo Guilizzoni</td>
+                          <td data-title="Mobile">9625145236</td>
+                          <td data-title="Active">Active</td>
+                          <td data-title="Timesheet">Timesheet</td>
+                          <td data-title=""><a href="javascript:void(0);"><i class="icon ion-android-more-vertical"></i></a></td>
+                        </tr>
+                        <tr>
+                          <td data-title="Firm Name">Giacomo Guilizzoni</td>
+                          <td data-title="Firm Code">JONEA140</td>
+                          <td data-title="Firm State/City">Melbourne</td>
+                          <td data-title="Firm Incharge Name">Giacomo Guilizzoni</td>
+                          <td data-title="Mobile">9625145236</td>
+                          <td data-title="Active">Active</td>
+                          <td data-title="Timesheet">Timesheet</td>
+                          <td data-title=""><a href="javascript:void(0);"><i class="icon ion-android-more-vertical"></i></a></td>
+                        </tr>
+                        <tr>
+                          <td data-title="Firm Name">Giacomo Guilizzoni</td>
+                          <td data-title="Firm Code">JONEA140</td>
+                          <td data-title="Firm State/City">Melbourne</td>
+                          <td data-title="Firm Incharge Name">Giacomo Guilizzoni</td>
+                          <td data-title="Mobile">9625145236</td>
+                          <td data-title="Active">Active</td>
+                          <td data-title="Timesheet">Timesheet</td>
+                          <td data-title=""><a href="javascript:void(0);"><i class="icon ion-android-more-vertical"></i></a></td>
+                        </tr>
+                        <tr>
+                          <td data-title="Firm Name">Giacomo Guilizzoni</td>
+                          <td data-title="Firm Code">JONEA140</td>
+                          <td data-title="Firm State/City">Melbourne</td>
+                          <td data-title="Firm Incharge Name">Giacomo Guilizzoni</td>
+                          <td data-title="Mobile">9625145236</td>
+                          <td data-title="Active">Active</td>
+                          <td data-title="Timesheet">Timesheet</td>
+                          <td data-title=""><a href="javascript:void(0);"><i class="icon ion-android-more-vertical"></i></a></td>
+                        </tr>
+                        <tr>
+                          <td data-title="Firm Name">Giacomo Guilizzoni</td>
+                          <td data-title="Firm Code">JONEA140</td>
+                          <td data-title="Firm State/City">Melbourne</td>
+                          <td data-title="Firm Incharge Name">Giacomo Guilizzoni</td>
+                          <td data-title="Mobile">9625145236</td>
+                          <td data-title="Active">Active</td>
+                          <td data-title="Timesheet">Timesheet</td>
+                          <td data-title=""><a href="javascript:void(0);"><i class="icon ion-android-more-vertical"></i></a></td>
+                        </tr>
+                        <tr>
+                          <td data-title="Firm Name">Giacomo Guilizzoni</td>
+                          <td data-title="Firm Code">JONEA140</td>
+                          <td data-title="Firm State/City">Melbourne</td>
+                          <td data-title="Firm Incharge Name">Giacomo Guilizzoni</td>
+                          <td data-title="Mobile">9625145236</td>
+                          <td data-title="Active">Active</td>
+                          <td data-title="Timesheet">Timesheet</td>
+                          <td data-title=""><a href="javascript:void(0);"><i class="icon ion-android-more-vertical"></i></a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script src="./app.js" charset="utf-8"></script>
+  </body>
+</html>
