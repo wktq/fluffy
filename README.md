@@ -3,6 +3,10 @@
 fluffy is an amazing clean Frontend Framework, developing with SASS and minimal Javascript.
 It works just below code.
 
+```
+npm -g install webpack@2.2.0-rc.4
+```
+
 [**get the code on github**](https://github.com/wktq/fluffy)
 
 I came across this issue while developing a prototype and not a single page app, that I needed to have a `.scss` file include some other files and output a `.css` file. I didn't need inlined and scoped CSS like one would probably do with a single page app.
