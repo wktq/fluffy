@@ -1,8 +1,9 @@
-# Webpack Sass / Scss compiling to separate file
+# fluffy - modern design CSS Framework
 
-Webpack is an amazing tool for transpiling and bundling JavaScript, but it can also take care of compiling Sass or Scss to static files.
+fluffy is an amazing clean Frontend Framework, developing with SASS and minimal Javascript.
+It works just below code.
 
-[**get the code on github**](https://github.com/JonathanMH/webpack-scss-sass-file)
+[**get the code on github**](https://github.com/wktq/fluffy)
 
 I came across this issue while developing a prototype and not a single page app, that I needed to have a `.scss` file include some other files and output a `.css` file. I didn't need inlined and scoped CSS like one would probably do with a single page app.
 
