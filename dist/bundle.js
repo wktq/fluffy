@@ -71,6 +71,8 @@
 /***/ (function(module, exports) {
 
 $('.list.has-child .list-parent').on('click', function() {
+  $('.list.child-open').removeClass('child-open');
+
   if($(this).parents('.list').find('.list-child').length){
     $(this).parents('.list').toggleClass('child-open');
   }
@@ -104,6 +106,23 @@ function hashContentShow(hash) {
 }
 
 hashContentChange();
+
+
+$('.dialog-button').on('click', function() {
+  var modalId = $(this).data('modalId');
+  $('.dialog-wrapper').fadeIn();
+  setTimeout(function(){
+    $('.dialog[data-dialog-id]').addClass('appeared');
+  },50);
+});
+
+$('.dialog-close-button').on('click', function() {
+  var modalId = $(this).parents('.dialog').data('modalId');
+  $('.dialog[data-dialog-id]').removeClass('appeared');
+  setTimeout(function(){
+    $('.dialog-wrapper').fadeOut();
+  },50);
+});
 
 
 /***/ }),

@@ -1,9 +1,9 @@
 .card {
   background-color: #fff;
-  -webkit-box-shadow: 1px 1px 4px rgba(55, 76, 90, 0.23), -1px -1px 1px rgba(0, 0, 0, 0.04), 0px 0px 3px rgba(40, 25, 80, 0.1);
-  -moz-box-shadow: 1px 1px 4px rgba(55, 76, 90, 0.23), -1px -1px 1px rgba(0, 0, 0, 0.04), 0px 0px 3px rgba(40, 25, 80, 0.1);
-  -o-box-shadow: 1px 1px 4px rgba(55, 76, 90, 0.23), -1px -1px 1px rgba(0, 0, 0, 0.04), 0px 0px 3px rgba(40, 25, 80, 0.1);
-  box-shadow: 1px 1px 4px rgba(55, 76, 90, 0.23), -1px -1px 1px rgba(0, 0, 0, 0.04), 0px 0px 3px rgba(40, 25, 80, 0.1);
+  -webkit-box-shadow: -1px -1px 4px rgba(0, 0, 0, 0.04), 0 1px 5px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: -1px -1px 4px rgba(0, 0, 0, 0.04), 0 1px 5px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -o-box-shadow: -1px -1px 4px rgba(0, 0, 0, 0.04), 0 1px 5px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: -1px -1px 4px rgba(0, 0, 0, 0.04), 0 1px 5px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   border-radius: 2px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -18,13 +18,12 @@
     -webkit-border-radius: 0px;
     -o-border-radius: 0px; }
   .card .card-head {
-    padding: 12px 16px;
+    padding: 14px 16px;
     position: relative;
-    border-bottom: 2px solid #eee;
-    font-weight: bold; }
+    border-bottom: 2px solid #eee; }
     .card .card-head .card-head-rightBtn {
       position: absolute;
-      right: 12px;
+      right: 16px;
       top: 50%;
       transform: translateY(-50%);
       -moz-transform: translateY(-50%);
@@ -33,10 +32,32 @@
       cursor: pointer;
       text-decoration: none; }
   .card .card-body {
-    padding: 8px 16px; }
+    padding: 14px 16px;
+    font-size: 13px; }
+    .card .card-body p:last-child {
+      margin: 0; }
+  .card .card-foot {
+    padding: 10px 16px;
+    position: relative;
+    border-top: 1px solid #eee;
+    font-weight: bold; }
+    .card .card-foot .card-foot-btn {
+      margin-bottom: 0 !important;
+      margin-right: 8px !important; }
   .card .card-menu {
     padding: 0;
     margin: 0; }
+
+.card.card-image .card-title {
+  padding: 0 16px; }
+
+.card.card-image .card-head {
+  border-bottom: 0px solid #eee; }
+
+.card.card-image .card-body {
+  padding: 0px; }
+  .card.card-image .card-body img {
+    width: 100%; }
 
 .btn, .btn-block {
   background-color: #fff;
@@ -98,10 +119,6 @@
   width: 100%;
   z-index: 50;
   display: flex;
-  border-radius: 2px;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  -o-border-radius: 2px;
   box-shadow: 0px 1px 2px rgba(55, 76, 90, 0.18);
   -moz-box-shadow: 0px 1px 2px rgba(55, 76, 90, 0.18);
   -webkit-box-shadow: 0px 1px 2px rgba(55, 76, 90, 0.18);
@@ -110,6 +127,30 @@
     text-align: center;
     width: 100%;
     line-height: 50px; }
+  .header .header-left {
+    position: absolute;
+    left: 16px;
+    top: 0;
+    height: 50px;
+    line-height: 50px; }
+    .header .header-left .icon {
+      font-size: 24px; }
+    .header .header-left .btn {
+      margin: 0; }
+      .header .header-left .btn .icon {
+        font-size: 14px; }
+  .header .header-right {
+    position: absolute;
+    right: 16px;
+    top: 0;
+    height: 50px;
+    line-height: 50px; }
+    .header .header-right .icon {
+      font-size: 24px; }
+    .header .header-right .btn {
+      margin: 0; }
+      .header .header-right .btn .icon {
+        font-size: 14px; }
   .header.fixed {
     position: fixed; }
 
@@ -228,10 +269,60 @@ code {
   background-color: #333;
   color: #ddd; }
 
+.dialog-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+  z-index: 50;
+  display: none; }
+  .dialog-wrapper .dialog {
+    position: absolute;
+    left: 50%;
+    right: auto;
+    top: 0%;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    background-color: #fff;
+    z-index: 80;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out; }
+    .dialog-wrapper .dialog .dialog-content {
+      padding: 16px; }
+    .dialog-wrapper .dialog.appeared {
+      top: 50%;
+      opacity: 1; }
+    .dialog-wrapper .dialog .dialog-close-button {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      cursor: pointer;
+      line-height: 1; }
+      .dialog-wrapper .dialog .dialog-close-button .icon {
+        font-size: 20px;
+        margin: 0; }
+
 body {
   color: #353535;
   background-color: #F6F9FC;
   font-family: 'Poppins'; }
+
+a {
+  color: #0091EA;
+  transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  -webkit-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out; }
+  a:hover {
+    color: #01579B; }
 
 .logo {
   font-family: 'Coda';
@@ -268,3 +359,9 @@ body {
 
 [data-hash-content] {
   display: none; }
+
+.card-body {
+  background-color: #f9f9f9; }
+
+.card .card .card-body {
+  background-color: #fff; }

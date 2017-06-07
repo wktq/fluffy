@@ -17,8 +17,16 @@
   </head>
   <body>
     <header class="header fixed">
+      <div class="header-left">
+        <a href="https://github.com/wktq/fluffy" target="_blank">
+          <i class="icon ion-social-github"></i>
+        </a>
+      </div>
       <div class="header-content">
         <span class="logo-icon"></span><span class="logo">fluffy.css</span>
+      </div>
+      <div class="header-right">
+        <button class="btn red dialog-button" data-dialog-id="get-fluffy"><i class="icon ion-archive"></i>Get fluffy!</button>
       </div>
     </header>
     <div class="container" style="padding-top: 66px">
@@ -55,33 +63,33 @@
             <ul class="card-menu">
               <ul class="list has-child">
                 <a class="list-item list-parent"><i class="icon ion-star"></i>Special</a>
-                <a class="list-item list-child">iPhone mockup</a>
-                <a class="list-item list-child">Tweet</a>
-                <a class="list-item list-child">Wizard</a>
-                <a class="list-item list-child">Avatars</a>
-                <a class="list-item list-child">Auto Complete</a>
+                <a href="special.html#iphone-mockup" data-hash-list="iphone-mockup" class="list-item list-child">iPhone mockup</a>
+                <a href="special.html#tweet" data-hash-list="tweet" class="list-item list-child">Tweet</a>
+                <a href="special.html#wizard" data-hash-list="wizard" class="list-item list-child">Wizard</a>
+                <a href="special.html#avatars" data-hash-list="avatars" class="list-item list-child">Avatars</a>
+                <a href="special.html#auto-complete" data-hash-list="auto-complete" class="list-item list-child">Auto Complete</a>
               </ul>
             </ul>
             <ul class="card-menu">
               <ul class="list has-child">
                 <a class="list-item list-parent"><i class="icon ion-film-marker"></i>Animations</a>
-                <a class="list-item list-child">Fade</a>
-                <a class="list-item list-child">Slide</a>
-                <a class="list-item list-child">Zoom</a>
-                <a class="list-item list-child">Blur</a>
-                <a class="list-item list-child">Raise</a>
-                <a class="list-item list-child">Pulse</a>
+                <a href="animations.html#fade" data-hash-list="fade" class="list-item list-child">Fade</a>
+                <a href="animations.html#slide" data-hash-list="slide" class="list-item list-child">Slide</a>
+                <a href="animations.html#zoom" data-hash-list="zoom" class="list-item list-child">Zoom</a>
+                <a href="animations.html#blur" data-hash-list="blur" class="list-item list-child">Blur</a>
+                <a href="animations.html#raise" data-hash-list="raise" class="list-item list-child">Raise</a>
+                <a href="animations.html#pulse" data-hash-list="pulse" class="list-item list-child">Pulse</a>
               </ul>
             </ul>
             <ul class="card-menu">
               <ul class="list has-child">
                 <a class="list-item list-parent"><i class="icon ion-social-javascript"></i>JavaScript</a>
-                <a class="list-item list-child">Sidemenu</a>
-                <a class="list-item list-child">Dropdown</a>
-                <a class="list-item list-child">Modal</a>
-                <a class="list-item list-child">Popover</a>
-                <a class="list-item list-child">Slider</a>
-                <a class="list-item list-child">Tabs</a>
+                <a href="javascript.html#sidemenu" data-hash-list="sidemenu" class="list-item list-child">Sidemenu</a>
+                <a href="javascript.html#dropdown" data-hash-list="dropdown" class="list-item list-child">Dropdown</a>
+                <a href="javascript.html#dialog" data-hash-list="dialog" class="list-item list-child">Dialog</a>
+                <a href="javascript.html#popover" data-hash-list="popover" class="list-item list-child">Popover</a>
+                <a href="javascript.html#slider" data-hash-list="slider" class="list-item list-child">Slider</a>
+                <a href="javascript.html#tabs" data-hash-list="tabs" class="list-item list-child">Tabs</a>
               </ul>
             </ul>
           </div>
@@ -113,6 +121,14 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="dialog-wrapper">
+      <div class="dialog card" data-dialog-id="get-fluffy">
+        <a class="dialog-close-button"><i class="icon ion-android-close"></i></a>
+        <div class="dialog-content">
+          Download & CDN
         </div>
       </div>
     </div>

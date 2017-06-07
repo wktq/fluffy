@@ -47,7 +47,7 @@
               </ul>
             </ul>
             <ul class="card-menu">
-              <ul class="list has-child child-open">
+              <ul class="list has-child">
                 <a class="list-item list-parent"><i class="icon ion-settings"></i>Element</a>
                 <a href="element.html#cards" data-hash-list="cards" class="list-item list-child">Cards</a>
                 <a href="element.html#header-and-footer" data-hash-list="header-and-footer" class="list-item list-child">Header & Footer</a>
@@ -82,7 +82,7 @@
               </ul>
             </ul>
             <ul class="card-menu">
-              <ul class="list has-child">
+              <ul class="list has-child child-open">
                 <a class="list-item list-parent"><i class="icon ion-social-javascript"></i>JavaScript</a>
                 <a href="javascript.html#sidemenu" data-hash-list="sidemenu" class="list-item list-child">Sidemenu</a>
                 <a href="javascript.html#dropdown" data-hash-list="dropdown" class="list-item list-child">Dropdown</a>
@@ -94,166 +94,65 @@
             </ul>
           </div>
         </div>
-        <div class="col-md-10" id="hash_content">
-          <div class="card solid">
+        <div class="col-md-10">
+          <div class="card solid" id="hash_content">
             <div class="card-head">
-              <i class="icon ion-settings"></i>Element - <span class="hash-name"></span>
+              <i class="icon ion-checkmark"></i>Basic - <span class="hash-name"></span>
               <a class="card-head-rightBtn"><i class="icon ion-code-working"></i>View Code</a>
             </div>
             <div class="card-body">
-              <div data-hash-content="cards" class="row">
+              <div class="row" data-hash-content="sidemenu">
                 <div class="col-md-12">
-                  <h1>Cards</h1>
+                  <h1>Side Menu</h1>
+                  <h5>Awesome Drawer Menu available.</h5>
                 </div>
-                <div class="col-md-4">
-                  <h5>Simple Card</h5>
-                  <div class="card">
-                    <div class="card-head">
-                      I'm Card Title
-                    </div>
-                    <div class="card-body">
-                      <p>I'm Card Content and Called Card Body.</p>
-                      <p>fluffy is awesome framework.</p>
-                    </div>
-                    <div class="card-foot">
-                      I'm Card Meta.
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <h5>Card With Image</h5>
-                  <div class="card card-image">
-                    <div class="card-head">
-                      I'm Card Title
-                    </div>
-                    <div class="card-body">
-                      <img src="https://images.pexels.com/photos/39694/sunset-sea-sun-birds-39694.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
-                      <h3 class="card-title">Card With Image</h3>
-                    </div>
-                    <div class="card-foot">
-                      <i class="icon ion-trash-a"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <h5>Card With Buttons</h5>
-                  <div class="card">
-                    <div class="card-head">
-                      I'm Card Title
-                      <a class="card-head-rightBtn"><i class="icon ion-edit"></i>Edit</a>
-                    </div>
-                    <div class="card-body">
-                      I'm Card Content.
-                    </div>
-                    <div class="card-foot">
-                      <button class="btn card-foot-btn red"><i class="icon ion-edit"></i>Edit</button>
-                      <button class="btn card-foot-btn"><i class="icon ion-trash-a"></i>Delete</button>
-                    </div>
-                  </div>
+                <div class="col-md-12">
+                  <button class="btn red">Open Menu</button>
                 </div>
               </div>
-
-              <div data-hash-content="header-and-footer" class="row">
-                <div class="row">
-                  <div class="col-md-12">
-                    <h1>Header and Footer</h1>
-                  </div>
+              <div class="row" data-hash-content="dropdown">
+                <div class="col-md-12">
+                  <h1>Dropdown</h1>
+                  <h5>You can show Additional Options with Dropdown.</h5>
                 </div>
-                <div class="row">
-                  <div style="position: relative; height: 80px; margin: 0 20px;">
-                    <header class="header">
-                      <div class="header-left">
-                        <a href="https://github.com/wktq/fluffy" target="_blank">
-                          <i class="icon ion-social-github"></i>
-                        </a>
-                      </div>
-                      <div class="header-content">
-                        <span class="logo-icon"></span><span class="logo">fluffy.css</span>
-                      </div>
-                      <div class="header-right">
-                        <button class="btn red"><i class="icon ion-code"></i>Get fluffy!</button>
-                      </div>
-                    </header>
-                  </div>
+                <div class="col-md-12">
+                  <button class="btn red">Drop me</button>
                 </div>
               </div>
-
-              <div data-hash-content="vertical-navs" class="row">
+              <div class="row" data-hash-content="dialog">
                 <div class="col-md-12">
-                  <h1>Vertical Navs</h1>
+                  <h1>Modal</h1>
+                  <h5>Beautiful Modal made with Pure CSS3 Animation</h5>
                 </div>
                 <div class="col-md-12">
-                  <div class="card">
-                    Hi
-                  </div>
+                  <button class="btn red dialog-button" data-dialog-id="5">Open Modal</button>
                 </div>
               </div>
-
-              <div data-hash-content="paginations" class="row">
+              <div class="row" data-hash-content="popover">
                 <div class="col-md-12">
-                  <h1>Paginations</h1>
+                  <h1>Buttons</h1>
+                  <h5>Clean and Modern design buttons here.</h5>
                 </div>
                 <div class="col-md-12">
-                  <div class="card">
-                    Hi
-                  </div>
+                  <button class="btn red">Open Modal</button>
                 </div>
               </div>
-
-              <div data-hash-content="calendar" class="row">
+              <div class="row" data-hash-content="slider">
                 <div class="col-md-12">
-                  <h1>Calendar</h1>
+                  <h1>Buttons</h1>
+                  <h5>Clean and Modern design buttons here.</h5>
                 </div>
                 <div class="col-md-12">
-                  <div class="card">
-                    Hi
-                  </div>
+                  <button class="btn red">Open Modal</button>
                 </div>
               </div>
-
-              <div data-hash-content="progress-bar" class="row">
+              <div class="row" data-hash-content="tabs">
                 <div class="col-md-12">
-                  <h1>Progress Bar</h1>
+                  <h1>Buttons</h1>
+                  <h5>Clean and Modern design buttons here.</h5>
                 </div>
                 <div class="col-md-12">
-                  <div class="card">
-                    Hi
-                  </div>
-                </div>
-              </div>
-
-              <div data-hash-content="breadcrumbs" class="row">
-                <div class="col-md-12">
-                  <h1>Breadcrumbs</h1>
-                </div>
-                <div class="col-md-12">
-                  <div class="card">
-                    Hi
-                  </div>
-                </div>
-              </div>
-
-              <div data-hash-content="magic-box" class="row">
-                <div class="col-md-12">
-                  <h1>Magic Box</h1>
-                  <h5>Any Contents in Magic Box keep width in mobile and be scrollable.</h5>
-                </div>
-                <div class="col-md-12">
-                  <div class="card">
-                    Hi
-                  </div>
-                </div>
-              </div>
-
-              <div data-hash-content="loading" class="row">
-                <div class="col-md-12">
-                  <h1>Loading</h1>
-                  <h5>Spinner, loading styles</h5>
-                </div>
-                <div class="col-md-12">
-                  <div class="card">
-                    Hi
-                  </div>
+                  <button class="btn red">Open Modal</button>
                 </div>
               </div>
             </div>
@@ -266,6 +165,12 @@
         <a class="dialog-close-button"><i class="icon ion-android-close"></i></a>
         <div class="dialog-content">
           Download & CDN
+        </div>
+      </div>
+      <div class="dialog card" data-dialog-id="5">
+        <a class="dialog-close-button"><i class="icon ion-android-close"></i></a>
+        <div class="dialog-content">
+          sdsd
         </div>
       </div>
     </div>

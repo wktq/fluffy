@@ -15,12 +15,22 @@ $set-prefix: '' , -moz- , -webkit-, -o-;
 @import './components/box.scss';
 @import './components/table.scss';
 @import './components/code.scss';
+@import './components/dialog.scss';
+
 body {
   color: #353535;
   background-color: #F6F9FC;
   font-family: 'Poppins';
 }
 
+a {
+  color: #0091EA;
+  @include setPrefix(transition, all .15s ease-in-out);
+
+  &:hover {
+    color: #01579B;
+  }
+}
 
 .logo {
   font-family: 'Coda';
@@ -54,4 +64,14 @@ body {
 }
 [data-hash-content] {
   display: none;
+}
+
+.card-body {
+  background-color: #f9f9f9;
+}
+
+.card .card {
+  .card-body {
+    background-color: #fff;
+  }
 }
