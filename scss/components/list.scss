@@ -25,6 +25,7 @@
 
   .list-parent {
     box-sizing: border-box;
+    font-weight: bold;
 
     &.active, &:hover {
       background-color: #f5f5f5;
