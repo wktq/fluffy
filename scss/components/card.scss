@@ -6,6 +6,9 @@
   box-shadow: 1px 1px 4px rgba(55,76,90,.23), -1px -1px 1px rgba(0,0,0,.04), 0px 0px 3px rgba(40,25,80,.10);
   @include setPrefix(border-radius, 2px);
   overflow: hidden;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
 
   &.solid {
     @include setPrefix(border-radius, 0px);
@@ -16,6 +19,15 @@
     position: relative;
     border-bottom: 2px solid #eee;
     font-weight: bold;
+
+    .card-head-rightBtn {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      @include setPrefix(transform, translateY(-50%));
+      cursor: pointer;
+      text-decoration: none;
+    }
   }
 
   .card-body {

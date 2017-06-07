@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="./dist/fluffy.css">
     <link href="https://fonts.googleapis.com/css?family=Coda|Poppins" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style media="screen">
       .icon {
@@ -22,7 +23,7 @@
     </header>
     <div class="container" style="padding-top: 66px">
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-2">
           <div class="card fixed-content">
             <div class="card-head">
               Content Menu
@@ -30,25 +31,25 @@
             <ul class="card-menu">
               <ul class="list has-child child-open">
                 <a class="list-item list-parent"><i class="icon ion-checkmark"></i>Basic</a>
-                <a href="basic.html#flex-heading" class="list-item list-child">Flex Heading</a>
-                <a href="basic.html#buttons" class="list-item list-child">Buttons</a>
-                <a href="basic.html#forms" class="list-item list-child">Forms</a>
-                <a href="basic.html#lists" class="list-item list-child">Lists</a>
-                <a href="basic.html#tables" class="list-item list-child">Tables</a>
+                <a href="basic.html#flex-heading" data-hash-list="flex-heading" class="list-item list-child">Flex Heading</a>
+                <a href="basic.html#buttons" data-hash-list="buttons" class="list-item list-child">Buttons</a>
+                <a href="basic.html#forms" data-hash-list="forms" class="list-item list-child">Forms</a>
+                <a href="basic.html#lists" data-hash-list="lists" class="list-item list-child">Lists</a>
+                <a href="basic.html#tables" data-hash-list="tables" class="list-item list-child">Tables</a>
               </ul>
             </ul>
             <ul class="card-menu">
               <ul class="list has-child">
                 <a class="list-item list-parent"><i class="icon ion-settings"></i>Element</a>
-                <a class="list-item list-child">Cards</a>
-                <a class="list-item list-child">Header & Footer</a>
-                <a class="list-item list-child">Vertical Navs</a>
-                <a class="list-item list-child">Pagenations</a>
-                <a class="list-item list-child">Calendar</a>
-                <a class="list-item list-child">Progress Bar</a>
-                <a class="list-item list-child">Breadcrumbs</a>
-                <a class="list-item list-child">Magic box</a>
-                <a class="list-item list-child">Loading</a>
+                <a href="element.html#cards" data-hash-list="cards" class="list-item list-child">Cards</a>
+                <a href="element.html#header-and-footer" data-hash-list="header-and-footer" class="list-item list-child">Header & Footer</a>
+                <a href="element.html#vertical-navs" data-hash-list="vertical-navs" class="list-item list-child">Vertical Navs</a>
+                <a href="element.html#paginations" data-hash-list="paginations" class="list-item list-child">Pagenations</a>
+                <a href="element.html#calendar" data-hash-list="calendar" class="list-item list-child">Calendar</a>
+                <a href="element.html#progress-bar" data-hash-list="progress-bar" class="list-item list-child">Progress Bar</a>
+                <a href="element.html#breadcrumbs" data-hash-list="breadcrumbs" class="list-item list-child">Breadcrumbs</a>
+                <a href="element.html#magic-box" data-hash-list="magic-box" class="list-item list-child">Magic box</a>
+                <a href="element.html#loading" data-hash-list="loading" class="list-item list-child">Loading</a>
               </ul>
             </ul>
             <ul class="card-menu">
@@ -85,15 +86,16 @@
             </ul>
           </div>
         </div>
-        <div class="col-md-9">
-          <div class="card solid">
+        <div class="col-md-10">
+          <div class="card solid" id="hash_content">
             <div class="card-head">
-              Basic
+              <i class="icon ion-checkmark"></i>Basic - <span class="hash-name"></span>
+              <a class="card-head-rightBtn"><i class="icon ion-code-working"></i>View Code</a>
             </div>
             <div class="card-body">
-              <div class="row">
+              <div class="row" data-hash-content="flex-heading">
                 <div class="col-md-12">
-                  <h1 id="flex-heading">Flex Heading</h1>
+                  <h1>Flex Heading</h1>
                   <h5>All Headings are completely flexible.</h5>
                 </div>
                 <div class="col-md-12">
@@ -105,9 +107,9 @@
                   <h6>This is Important Word.</h6>
                 </div>
               </div>
-              <div class="row">
+              <div class="row" data-hash-content="buttons">
                 <div class="col-md-12">
-                  <h1 id="buttons">Buttons</h1>
+                  <h1>Buttons</h1>
                   <h5>Clean and Modern design buttons here.</h5>
                 </div>
                 <div class="col-md-12">
@@ -121,9 +123,9 @@
                   <button class="btn black">Black Button</button>
                 </div>
               </div>
-              <div class="row">
+              <div class="row" data-hash-content="forms">
                 <div class="col-md-12">
-                  <h1 id="forms">Forms</h1>
+                  <h1>Forms</h1>
                   <h5>Simple and Clean Form</h5>
                 </div>
                 <div class="row">
@@ -153,9 +155,9 @@
                   </div>
                 </div>
               </div>
-              <div class="row">
+              <div class="row" data-hash-content="lists">
                 <div class="col-md-12">
-                  <h1 id="forms">Lists</h1>
+                  <h1>Lists</h1>
                   <h5>List can be used Awesome Menu, Index of Items.</h5>
                 </div>
                 <div class="row">
@@ -177,9 +179,9 @@
                   </div>
                 </div>
               </div>
-              <div class="row">
+              <div class="row" data-hash-content="tables">
                 <div class="col-md-12">
-                  <h1 id="tables">Tables</h1>
+                  <h1>Tables</h1>
                 </div>
                 <div class="col-md-12">
                   <h5>Default Table</h5>

@@ -8,7 +8,10 @@
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   -o-border-radius: 2px;
-  overflow: hidden; }
+  overflow: hidden;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch; }
   .card.solid {
     border-radius: 0px;
     -moz-border-radius: 0px;
@@ -19,6 +22,16 @@
     position: relative;
     border-bottom: 2px solid #eee;
     font-weight: bold; }
+    .card .card-head .card-head-rightBtn {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      cursor: pointer;
+      text-decoration: none; }
   .card .card-body {
     padding: 8px 16px; }
   .card .card-menu {
@@ -232,3 +245,16 @@ body {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bc1ee8', endColorstr='#0fb4e7',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */ }
+
+.fixed-content {
+  position: relative; }
+
+@media screen and (min-width: 1200px) {
+  .fixed-content {
+    position: fixed;
+    top: 66px;
+    max-height: calc(100vh - 80px);
+    overflow-y: scroll; } }
+
+[data-hash-content] {
+  display: none; }

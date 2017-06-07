@@ -41,3 +41,17 @@ body {
   background: linear-gradient(135deg, rgba(188,30,232,1) 0%,rgba(15,180,231,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bc1ee8', endColorstr='#0fb4e7',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
+.fixed-content {
+  position: relative;
+}
+@media screen and (min-width:1200px) {
+  .fixed-content {
+    position: fixed;
+    top: 66px;
+    max-height: calc(100vh - 80px);
+    overflow-y: scroll;
+  }
+}
+[data-hash-content] {
+  display: none;
+}
