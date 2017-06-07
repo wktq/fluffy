@@ -55,5 +55,16 @@
       top: calc(50% - 1px);
       left: 24px;
     }
+
+    &.active:before {
+      content: '';
+      position: absolute;
+      height: 6px;
+      width: 6px;
+      border-radius: 50%;
+      background-color: red !important;
+      top: calc(50% - 3px);
+      left: 24px;
+    }
   }
 }
