@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Fluffy</title>
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./dist/fluffy.css">
+    <link href="https://fonts.googleapis.com/css?family=Coda|Poppins:300,400,500,600" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style media="screen">
+      .icon {
+        margin-right: 0.8rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header fixed">
+      <div class="header-left">
+        <a href="https://github.com/wktq/fluffy" target="_blank">
+          <i class="icon ion-social-github"></i>
+        </a>
+      </div>
+      <div class="header-content">
+        <span class="logo-icon"></span><span class="logo">fluffy.css</span>
+      </div>
+      <div class="header-right">
+        <button class="btn red dialog-button" data-dialog-id="get-fluffy"><i class="icon ion-archive"></i>Get fluffy!</button>
+      </div>
+    </header>
+    <div class="container" style="padding-top: 66px">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="card fixed-content">
+            <div class="card-head">
+              Content Menu
+            </div>
+            <ul class="card-menu">
+              <ul class="list has-child">
+                <a class="list-item list-parent"><i class="icon ion-checkmark"></i>Basic</a>
+                <a href="basic.html#flex-heading" data-hash-list="flex-heading" class="list-item list-child">Flex Heading</a>
+                <a href="basic.html#buttons" data-hash-list="buttons" class="list-item list-child">Buttons</a>
+                <a href="basic.html#forms" data-hash-list="forms" class="list-item list-child">Forms</a>
+                <a href="basic.html#lists" data-hash-list="lists" class="list-item list-child">Lists</a>
+                <a href="basic.html#tables" data-hash-list="tables" class="list-item list-child">Tables</a>
+              </ul>
+            </ul>
+            <ul class="card-menu">
+              <ul class="list has-child">
+                <a class="list-item list-parent"><i class="icon ion-settings"></i>Element</a>
+                <a href="element.html#cards" data-hash-list="cards" class="list-item list-child">Cards</a>
+                <a href="element.html#header-and-footer" data-hash-list="header-and-footer" class="list-item list-child">Header & Footer</a>
+                <a href="element.html#paginations" data-hash-list="paginations" class="list-item list-child">Pagenations</a>
+                <a href="element.html#calendar" data-hash-list="calendar" class="list-item list-child">Calendar</a>
+                <a href="element.html#progress-bar" data-hash-list="progress-bar" class="list-item list-child">Progress Bar</a>
+                <a href="element.html#breadcrumbs" data-hash-list="breadcrumbs" class="list-item list-child">Breadcrumbs</a>
+                <a href="element.html#magic-box" data-hash-list="magic-box" class="list-item list-child">Magic box</a>
+                <a href="element.html#loading" data-hash-list="loading" class="list-item list-child">Loading</a>
+              </ul>
+            </ul>
+            <ul class="card-menu">
+              <ul class="list has-child">
+                <a class="list-item list-parent"><i class="icon ion-star"></i>Special</a>
+                <a href="special.html#iphone-mockup" data-hash-list="iphone-mockup" class="list-item list-child">iPhone mockup</a>
+                <a href="special.html#tweet" data-hash-list="tweet" class="list-item list-child">Tweet</a>
+                <a href="special.html#wizard" data-hash-list="wizard" class="list-item list-child">Wizard</a>
+                <a href="special.html#avatars" data-hash-list="avatars" class="list-item list-child">Avatars</a>
+                <a href="special.html#auto-complete" data-hash-list="auto-complete" class="list-item list-child">Auto Complete</a>
+              </ul>
+            </ul>
+            <ul class="card-menu">
+              <ul class="list has-child">
+                <a class="list-item list-parent"><i class="icon ion-film-marker"></i>Animations</a>
+                <a href="animations.html#fade" data-hash-list="fade" class="list-item list-child">Fade</a>
+                <a href="animations.html#slide" data-hash-list="slide" class="list-item list-child">Slide</a>
+                <a href="animations.html#zoom" data-hash-list="zoom" class="list-item list-child">Zoom</a>
+                <a href="animations.html#blur" data-hash-list="blur" class="list-item list-child">Blur</a>
+                <a href="animations.html#raise" data-hash-list="raise" class="list-item list-child">Raise</a>
+                <a href="animations.html#pulse" data-hash-list="pulse" class="list-item list-child">Pulse</a>
+              </ul>
+            </ul>
+            <ul class="card-menu">
+              <ul class="list has-child child-open">
+                <a class="list-item list-parent"><i class="icon ion-social-javascript"></i>JavaScript</a>
+                <a href="javascript.html#sidemenu" data-hash-list="sidemenu" class="list-item list-child">Sidemenu</a>
+                <a href="javascript.html#dropdown" data-hash-list="dropdown" class="list-item list-child">Dropdown</a>
+                <a href="javascript.html#dialog" data-hash-list="dialog" class="list-item list-child">Dialog</a>
+                <a href="javascript.html#popover" data-hash-list="popover" class="list-item list-child">Popover</a>
+                <a href="javascript.html#slider" data-hash-list="slider" class="list-item list-child">Slider</a>
+                <a href="javascript.html#tabs" data-hash-list="tabs" class="list-item list-child">Tabs</a>
+                <a href="fluffy-masonry.html" class="list-item list-child active">Masonry Layout</a>
+              </ul>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-10">
+          <div class="card solid">
+            <div class="card-head">
+              Fluffy Masonry
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <h1>Fluffy Masonry</h1>
+                  <h5>Masonry Layout is easy as pie</h5>
+                </div>
+              </div>
+              <div class="row">
+                <div class="masonry">
+                  <div class="card card-image">
+                    <div class="card-head">
+                      I'm Card Title
+                    </div>
+                    <div class="card-body">
+                      <img src="https://images.pexels.com/photos/39694/sunset-sea-sun-birds-39694.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
+                      <h3 class="card-title">Card With Image 1</h3>
+                    </div>
+                    <div class="card-foot">
+                      <i class="icon ion-trash-a"></i>
+                    </div>
+                  </div>
+                  <div class="card card-image">
+                    <div class="card-head">
+                      I'm Card Title
+                    </div>
+                    <div class="card-body">
+                      <img src="https://images.pexels.com/photos/39694/sunset-sea-sun-birds-39694.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
+                      <h3 class="card-title">Card With Image 2</h3>
+                      <p>Hi</p>
+                    </div>
+                    <div class="card-foot">
+                      <i class="icon ion-trash-a"></i>
+                    </div>
+                  </div>
+                  <div class="card card-image">
+                    <div class="card-head">
+                      I'm Card Title
+                    </div>
+                    <div class="card-body">
+                      <img src="https://images.pexels.com/photos/39694/sunset-sea-sun-birds-39694.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
+                      <h3 class="card-title">Card With Image 3</h3>
+                    </div>
+                    <div class="card-foot">
+                      <i class="icon ion-trash-a"></i>
+                    </div>
+                  </div>
+                  <div class="card card-image">
+                    <div class="card-head">
+                      I'm Card Title
+                    </div>
+                    <div class="card-body">
+                      <img src="https://images.pexels.com/photos/39694/sunset-sea-sun-birds-39694.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
+                      <h3 class="card-title">Card With Image 4</h3>
+                      <p>Hi</p>
+                      <p>Hi</p>
+                    </div>
+                    <div class="card-foot">
+                      <i class="icon ion-trash-a"></i>
+                    </div>
+                  </div>
+                  <div class="card card-image">
+                    <div class="card-head">
+                      I'm Card Title
+                    </div>
+                    <div class="card-body">
+                      <img src="https://images.pexels.com/photos/39694/sunset-sea-sun-birds-39694.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
+                      <h3 class="card-title">Card With Image 5</h3>
+                      <p>Hi</p>
+                      <p>Hi</p>
+                      <p>Hi</p>
+                    </div>
+                    <div class="card-foot">
+                      <i class="icon ion-trash-a"></i>
+                    </div>
+                  </div>
+                  <div class="card card-image">
+                    <div class="card-head">
+                      I'm Card Title
+                    </div>
+                    <div class="card-body">
+                      <img src="https://images.pexels.com/photos/39694/sunset-sea-sun-birds-39694.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
+                      <h3 class="card-title">Card With Image 6</h3>
+                      <p>Hi</p>
+                    </div>
+                    <div class="card-foot">
+                      <i class="icon ion-trash-a"></i>
+                    </div>
+                  </div>
+                  <div class="card card-image">
+                    <div class="card-head">
+                      I'm Card Title
+                    </div>
+                    <div class="card-body">
+                      <img src="https://images.pexels.com/photos/39694/sunset-sea-sun-birds-39694.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
+                      <h3 class="card-title">Card With Image 7</h3>
+                      <p>Hi</p>
+                    </div>
+                    <div class="card-foot">
+                      <i class="icon ion-trash-a"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dialog-wrapper">
+      <div class="dialog card" data-dialog-id="get-fluffy">
+        <a class="dialog-close-button"><i class="icon ion-android-close"></i></a>
+        <div class="dialog-content">
+          Download & CDN
+        </div>
+      </div>
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script src="./app.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    jQuery.fn.masonry = function(options) {
+      var defaults = {
+         validateOPtions1 : '',
+         validateOPtions2 : ''
+      };
+
+      var settings = $.extend({}, defaults, options);
+      var containerWidth = this.width();
+      var column_number = options.col_number;
+
+      var itemWidth = containerWidth / column_number;
+      console.log(itemWidth);
+
+      this.height(1200);
+      this.css('position', 'relative');
+
+      itemPositionLeft = 0;
+      itemPositionTop = 0;
+      itemHeight = [];
+
+      jQuery.each(this.children(), function(i, el) {
+        this.style.width = (itemWidth - 8) + 'px';
+        itemHeight.push(this.clientHeight);
+        console.log(itemHeight);
+
+        if (i == 0) {
+          itemPositionLeft = 0;
+          itemRow = i % column_number;
+
+        } else if (i % column_number == 0) {
+          itemPositionLeft = 0;
+          itemRow = i / column_number;
+
+        } else if (i % column_number == 1) {
+          itemPositionLeft = itemWidth;
+          itemRow = (i - 1) / column_number;
+
+        } else if (i % column_number == 2) {
+          itemPositionLeft = itemWidth*2;
+          itemRow = (i - 2) / column_number;
+
+        } else if (i % column_number == 3) {
+          itemPositionLeft = itemWidth*3;
+          itemRow = (i - 3) / column_number;
+
+        } else if (i % column_number == 4) {
+          itemPositionLeft = itemWidth*4;
+          itemRow = (i - 4) / column_number;
+        }
+
+        if (itemRow == 0) {
+          itemPositionTop = 0;
+        } else if (itemRow == 1) {
+          itemPositionTop = itemHeight[itemRow];
+        } else if (itemRow == 2) {
+          itemPositionTop = itemHeight[itemRow] + itemHeight[itemRow*2];
+        } else if (itemRow == 3) {
+          itemPositionTop = itemHeight[itemRow] + itemHeight[itemRow*3];
+        } else if (itemRow == 4) {
+          itemPositionTop = itemHeight[itemRow];
+        }
+
+        console.log(itemPositionTop);
+
+        this.style.transition = 'all 0.5s ease-in-out';
+        this.style.position = 'absolute';
+        this.style.top = itemPositionTop + 'px';
+        this.style.left = (itemPositionLeft + 4) + 'px';
+      });
+
+      return this.each(function(e) {
+      //  console.log(this.clientWidth);
+      //  console.log(this.clientHeight);
+      });
+    };
+
+    $(document).ready(function() {
+      $('.masonry').masonry({
+           col_number: 3,
+           validateOPtions2: 'value2'
+      });
+    });
+
+    </script>
+  </body>
+</html>

@@ -30,6 +30,7 @@
     &.appeared {
       top: 50%;
       opacity: 1;
+      animation: show-alert .8s;
     }
 
     .dialog-close-button {
@@ -44,5 +45,19 @@
         margin: 0;
       }
     }
+  }
+}
+@keyframes show-alert {
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+  50% {
+    top: 47.5%;
+    opacity: 1;
+  }
+  100% {
+    top: 50%;
+    opacity: 1;
   }
 }

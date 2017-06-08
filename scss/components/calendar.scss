@@ -1,0 +1,11 @@
+.calendar {
+  width: 500px;
+
+  .calendar-body {
+    display: flex;
+
+    .calendar-date {
+      flex: 0 0 14.28%;
+    }
+  }
+}

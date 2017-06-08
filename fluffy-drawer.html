@@ -18,6 +18,9 @@
   <body>
     <header class="header fixed">
       <div class="header-left">
+        <a class="drawer-open visible-xs" href="#" data-drawer-id="left">
+          <i class="icon ion-navicon"></i>
+        </a>
         <a href="https://github.com/wktq/fluffy" target="_blank">
           <i class="icon ion-social-github"></i>
         </a>
@@ -37,7 +40,7 @@
               Content Menu
             </div>
             <ul class="card-menu">
-              <ul class="list has-child child-open">
+              <ul class="list has-child">
                 <a class="list-item list-parent"><i class="icon ion-checkmark"></i>Basic</a>
                 <a href="basic.html#flex-heading" data-hash-list="flex-heading" class="list-item list-child">Flex Heading</a>
                 <a href="basic.html#buttons" data-hash-list="buttons" class="list-item list-child">Buttons</a>
@@ -81,7 +84,7 @@
               </ul>
             </ul>
             <ul class="card-menu">
-              <ul class="list has-child">
+              <ul class="list has-child child-open">
                 <a class="list-item list-parent"><i class="icon ion-social-javascript"></i>JavaScript</a>
                 <a href="javascript.html#sidemenu" data-hash-list="sidemenu" class="list-item list-child">Sidemenu</a>
                 <a href="javascript.html#dropdown" data-hash-list="dropdown" class="list-item list-child">Dropdown</a>
@@ -89,7 +92,7 @@
                 <a href="javascript.html#popover" data-hash-list="popover" class="list-item list-child">Popover</a>
                 <a href="javascript.html#slider" data-hash-list="slider" class="list-item list-child">Slider</a>
                 <a href="javascript.html#tabs" data-hash-list="tabs" class="list-item list-child">Tabs</a>
-                <a href="fluffy-masonry.html" class="list-item list-child">Masonry</a>
+                <a href="fluffy-masonry.html" class="list-item list-child active">Masonry Layout</a>
               </ul>
             </ul>
           </div>
@@ -97,26 +100,109 @@
         <div class="col-md-10">
           <div class="card solid">
             <div class="card-head">
-              Card - Components
+              Fluffy Masonry
             </div>
             <div class="card-body">
               <div class="row">
                 <div class="col-md-12">
-                  <h5>Card is useful wrapper of your elements.</h5>
+                  <h1>Fluffy Masonry</h1>
+                  <h5>Masonry Layout is easy as pie</h5>
                 </div>
-                <div class="col-md-6">
-                  <div class="card">
+              </div>
+              <div class="row">
+                <div class="masonry">
+                  <div class="card card-image">
+                    <div class="card-head">
+                      I'm Card Title
+                    </div>
                     <div class="card-body">
-                      hello
-                      <div class="">
-                        <button class="btn blue" type="button" name="button"><i class="icon ion-checkmark-circled"></i>Complete it!</button>
-                        <button class="btn red" type="button" name="button"><i class="icon ion-trash-a"></i>Delete it!</button>
-                      </div>
+                      <img src="https://images.pexels.com/photos/39694/sunset-sea-sun-birds-39694.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
+                      <h3 class="card-title">Card With Image 1</h3>
+                    </div>
+                    <div class="card-foot">
+                      <i class="icon ion-trash-a"></i>
                     </div>
                   </div>
-                </div>
-                <div class="col-md-6">
-                  adsas
+                  <div class="card card-image">
+                    <div class="card-head">
+                      I'm Card Title
+                    </div>
+                    <div class="card-body">
+                      <img src="https://images.pexels.com/photos/39694/sunset-sea-sun-birds-39694.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
+                      <h3 class="card-title">Card With Image 2</h3>
+                      <p>Hi</p>
+                    </div>
+                    <div class="card-foot">
+                      <i class="icon ion-trash-a"></i>
+                    </div>
+                  </div>
+                  <div class="card card-image">
+                    <div class="card-head">
+                      I'm Card Title
+                    </div>
+                    <div class="card-body">
+                      <img src="https://images.pexels.com/photos/39694/sunset-sea-sun-birds-39694.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
+                      <h3 class="card-title">Card With Image 3</h3>
+                    </div>
+                    <div class="card-foot">
+                      <i class="icon ion-trash-a"></i>
+                    </div>
+                  </div>
+                  <div class="card card-image">
+                    <div class="card-head">
+                      I'm Card Title
+                    </div>
+                    <div class="card-body">
+                      <img src="https://images.pexels.com/photos/39694/sunset-sea-sun-birds-39694.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
+                      <h3 class="card-title">Card With Image 4</h3>
+                      <p>Hi</p>
+                      <p>Hi</p>
+                    </div>
+                    <div class="card-foot">
+                      <i class="icon ion-trash-a"></i>
+                    </div>
+                  </div>
+                  <div class="card card-image">
+                    <div class="card-head">
+                      I'm Card Title
+                    </div>
+                    <div class="card-body">
+                      <img src="https://images.pexels.com/photos/39694/sunset-sea-sun-birds-39694.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
+                      <h3 class="card-title">Card With Image 5</h3>
+                      <p>Hi</p>
+                      <p>Hi</p>
+                      <p>Hi</p>
+                    </div>
+                    <div class="card-foot">
+                      <i class="icon ion-trash-a"></i>
+                    </div>
+                  </div>
+                  <div class="card card-image">
+                    <div class="card-head">
+                      I'm Card Title
+                    </div>
+                    <div class="card-body">
+                      <img src="https://images.pexels.com/photos/39694/sunset-sea-sun-birds-39694.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
+                      <h3 class="card-title">Card With Image 6</h3>
+                      <p>Hi</p>
+                    </div>
+                    <div class="card-foot">
+                      <i class="icon ion-trash-a"></i>
+                    </div>
+                  </div>
+                  <div class="card card-image">
+                    <div class="card-head">
+                      I'm Card Title
+                    </div>
+                    <div class="card-body">
+                      <img src="https://images.pexels.com/photos/39694/sunset-sea-sun-birds-39694.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
+                      <h3 class="card-title">Card With Image 7</h3>
+                      <p>Hi</p>
+                    </div>
+                    <div class="card-foot">
+                      <i class="icon ion-trash-a"></i>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -131,6 +217,17 @@
           Download & CDN
         </div>
       </div>
+    </div>
+    <div class="drawer left" data-drawer-id="left">
+      <a class="drawer-close-btn"><i class="icon ion-close"></i></a>
+      <ul class="list has-child">
+        <a class="list-item list-parent"><i class="icon ion-checkmark"></i>Basic</a>
+        <a href="basic.html#flex-heading" data-hash-list="flex-heading" class="list-item list-child">Flex Heading</a>
+        <a href="basic.html#buttons" data-hash-list="buttons" class="list-item list-child">Buttons</a>
+        <a href="basic.html#forms" data-hash-list="forms" class="list-item list-child">Forms</a>
+        <a href="basic.html#lists" data-hash-list="lists" class="list-item list-child">Lists</a>
+        <a href="basic.html#tables" data-hash-list="tables" class="list-item list-child">Tables</a>
+      </ul>
     </div>
     <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"

@@ -16,6 +16,9 @@ $set-prefix: '' , -moz- , -webkit-, -o-;
 @import './components/table.scss';
 @import './components/code.scss';
 @import './components/dialog.scss';
+@import './components/pagination.scss';
+@import './components/calendar.scss';
+@import './components/drawer.scss';
 
 body {
   color: #353535;

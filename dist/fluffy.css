@@ -51,6 +51,9 @@
 .card.card-image .card-title {
   padding: 0 16px; }
 
+.card.card-image p {
+  padding: 0 16px; }
+
 .card.card-image .card-head {
   border-bottom: 0px solid #eee; }
 
@@ -132,7 +135,10 @@
     left: 16px;
     top: 0;
     height: 50px;
-    line-height: 50px; }
+    line-height: 50px;
+    display: flex; }
+    .header .header-left a {
+      width: 28px; }
     .header .header-left .icon {
       font-size: 24px; }
     .header .header-left .btn {
@@ -299,7 +305,8 @@ code {
       padding: 16px; }
     .dialog-wrapper .dialog.appeared {
       top: 50%;
-      opacity: 1; }
+      opacity: 1;
+      animation: show-alert .8s; }
     .dialog-wrapper .dialog .dialog-close-button {
       position: absolute;
       top: 10px;
@@ -309,6 +316,80 @@ code {
       .dialog-wrapper .dialog .dialog-close-button .icon {
         font-size: 20px;
         margin: 0; }
+
+@keyframes show-alert {
+  0% {
+    top: 0%;
+    opacity: 0; }
+  50% {
+    top: 47.5%;
+    opacity: 1; }
+  100% {
+    top: 50%;
+    opacity: 1; } }
+
+.pagination > li > a, .pagination > li > span {
+  border: none !important;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -o-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 8px 16px 6px 16px !important; }
+
+.calendar {
+  width: 500px; }
+  .calendar .calendar-body {
+    display: flex; }
+    .calendar .calendar-body .calendar-date {
+      flex: 0 0 14.28%; }
+
+.drawer {
+  position: fixed;
+  left: -72vw;
+  top: 0;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 150;
+  width: 72vw;
+  transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out; }
+  .drawer.open {
+    left: 0px;
+    -webkit-box-shadow: 1px 0 4px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 1px 0 4px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 1px 0 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 0 4px rgba(0, 0, 0, 0.3); }
+    .drawer.open .drawer-close-btn {
+      display: block; }
+  .drawer .drawer-close-btn {
+    position: absolute;
+    right: -36px;
+    top: 0px;
+    color: #fff;
+    font-size: 20px;
+    padding: 8px;
+    display: none; }
+    .drawer .drawer-close-btn .icon {
+      margin: 0; }
+
+.drawer-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 149;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out; }
+  .drawer-overlay.active {
+    opacity: 1; }
 
 body {
   color: #353535;

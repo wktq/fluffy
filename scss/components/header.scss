@@ -21,6 +21,11 @@
     top: 0;
     height: 50px;
     line-height: 50px;
+    display: flex;
+
+    a {
+      width: 28px;
+    }
 
     .icon {
       font-size: 24px;
@@ -48,7 +53,7 @@
 
     .btn {
       margin: 0;
-      
+
       .icon {
         font-size: 14px;
       }

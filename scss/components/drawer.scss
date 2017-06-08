@@ -1,0 +1,52 @@
+.drawer {
+  position: fixed;
+  left: -72vw;
+  top: 0;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 150;
+  width: 72vw;
+  @include setPrefix(transition, all .2s ease-out);
+
+  &.open {
+    left: 0px;
+    -webkit-box-shadow: 1px 0 4px rgba(0,0,0,.3);
+    -moz-box-shadow: 1px 0 4px rgba(0,0,0,.3);
+    -o-box-shadow: 1px 0 4px rgba(0,0,0,.3);
+    box-shadow: 1px 0 4px rgba(0,0,0,.3);
+
+    .drawer-close-btn {
+      display: block;
+    }
+  }
+
+  .drawer-close-btn {
+    position: absolute;
+    right: -36px;
+    top: 0px;
+    color: #fff;
+    font-size: 20px;
+    padding: 8px;
+    display: none;
+
+    .icon {
+      margin: 0;
+    }
+  }
+}
+
+.drawer-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 149;
+  opacity: 0;
+  background-color: rgba(0,0,0,.3);
+  @include setPrefix(transition, all .2s ease-out);
+
+  &.active {
+    opacity: 1;
+  }
+}
