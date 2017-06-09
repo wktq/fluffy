@@ -158,9 +158,15 @@ function closeDrawer() {
   $('.drawer').removeClass('open');
 }
 
-$(document).on('click', '.drawer-overlay', function(e) {
-  closeDrawer();
-});
+if (window.mobilecheck()) {
+  $(document).bind('touchstart', '.drawer-overlay', function(e) {
+    closeDrawer();
+  });
+} else {
+  $(document).on('click', '.drawer-overlay', function(e) {
+    closeDrawer();
+  });
+}
 
 
 /***/ }),
