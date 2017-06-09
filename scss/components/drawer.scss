@@ -3,10 +3,11 @@
   left: -72vw;
   top: 0;
   height: 100vh;
+  overflow: hidden;
+  overflow-x: scroll;
   background-color: #fff;
   z-index: 150;
   width: 72vw;
-  @include setPrefix(transition, all .2s ease-out);
 
   &.open {
     left: 0px;
@@ -14,6 +15,7 @@
     -moz-box-shadow: 1px 0 4px rgba(0,0,0,.3);
     -o-box-shadow: 1px 0 4px rgba(0,0,0,.3);
     box-shadow: 1px 0 4px rgba(0,0,0,.3);
+    @include setPrefix(animation, show-drawer .5s);
 
     .drawer-close-btn {
       display: block;
@@ -48,5 +50,19 @@
 
   &.active {
     opacity: 1;
+  }
+}
+
+@keyframes show-drawer {
+  0% {
+    left: -72vw;
+  }
+
+  50% {
+    left: -5vw;
+  }
+
+  100% {
+    left: 0vw;
   }
 }

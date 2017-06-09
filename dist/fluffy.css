@@ -291,7 +291,7 @@ code {
     top: 0%;
     bottom: auto;
     transform: translate(-50%, -50%);
-    width: 100%;
+    width: calc(100% - 16px);
     max-width: 600px;
     height: 400px;
     background-color: #fff;
@@ -349,19 +349,21 @@ code {
   left: -72vw;
   top: 0;
   height: 100vh;
+  overflow: hidden;
+  overflow-x: scroll;
   background-color: #fff;
   z-index: 150;
-  width: 72vw;
-  transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -webkit-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out; }
+  width: 72vw; }
   .drawer.open {
     left: 0px;
     -webkit-box-shadow: 1px 0 4px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 1px 0 4px rgba(0, 0, 0, 0.3);
     -o-box-shadow: 1px 0 4px rgba(0, 0, 0, 0.3);
-    box-shadow: 1px 0 4px rgba(0, 0, 0, 0.3); }
+    box-shadow: 1px 0 4px rgba(0, 0, 0, 0.3);
+    animation: show-drawer 0.5s;
+    -moz-animation: show-drawer 0.5s;
+    -webkit-animation: show-drawer 0.5s;
+    -o-animation: show-drawer 0.5s; }
     .drawer.open .drawer-close-btn {
       display: block; }
   .drawer .drawer-close-btn {
@@ -391,6 +393,14 @@ code {
   .drawer-overlay.active {
     opacity: 1; }
 
+@keyframes show-drawer {
+  0% {
+    left: -72vw; }
+  50% {
+    left: -5vw; }
+  100% {
+    left: 0vw; } }
+
 body {
   color: #353535;
   background-color: #F6F9FC;
@@ -407,7 +417,9 @@ a {
 
 .logo {
   font-family: 'Coda';
-  font-size: 24px; }
+  font-size: 24px;
+  text-decoration: none;
+  color: #555; }
 
 .logo-icon {
   height: 18px;

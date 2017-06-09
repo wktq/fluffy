@@ -18,7 +18,7 @@
   <body>
     <header class="header fixed">
       <div class="header-left">
-        <a class="drawer-open visible-xs" href="#">
+        <a class="drawer-open visible-xs" href="#" data-drawer-id="left">
           <i class="icon ion-navicon"></i>
         </a>
         <a href="https://github.com/wktq/fluffy" target="_blank">
@@ -26,7 +26,7 @@
         </a>
       </div>
       <div class="header-content">
-        <span class="logo-icon"></span><span class="logo">fluffy.css</span>
+        <a href="index.html"><span class="logo-icon"></span><span class="logo">fluffy.css</span></a>
       </div>
       <div class="header-right">
         <button class="btn red dialog-button" data-dialog-id="get-fluffy"><i class="ion-archive"></i><span class="hidden-xs">&nbsp;Get fluffy!</span></button>
@@ -48,8 +48,6 @@
                 <a href="basic.html#lists" data-hash-list="lists" class="list-item list-child">Lists</a>
                 <a href="basic.html#tables" data-hash-list="tables" class="list-item list-child">Tables</a>
               </ul>
-            </ul>
-            <ul class="card-menu">
               <ul class="list has-child child-open">
                 <a class="list-item list-parent"><i class="icon ion-settings"></i>Element</a>
                 <a href="element.html#cards" data-hash-list="cards" class="list-item list-child">Cards</a>
@@ -61,8 +59,6 @@
                 <a href="element.html#magic-box" data-hash-list="magic-box" class="list-item list-child">Magic box</a>
                 <a href="element.html#loading" data-hash-list="loading" class="list-item list-child">Loading</a>
               </ul>
-            </ul>
-            <ul class="card-menu">
               <ul class="list has-child">
                 <a class="list-item list-parent"><i class="icon ion-star"></i>Special</a>
                 <a href="special.html#iphone-mockup" data-hash-list="iphone-mockup" class="list-item list-child">iPhone mockup</a>
@@ -71,8 +67,6 @@
                 <a href="special.html#avatars" data-hash-list="avatars" class="list-item list-child">Avatars</a>
                 <a href="special.html#auto-complete" data-hash-list="auto-complete" class="list-item list-child">Auto Complete</a>
               </ul>
-            </ul>
-            <ul class="card-menu">
               <ul class="list has-child">
                 <a class="list-item list-parent"><i class="icon ion-film-marker"></i>Animations</a>
                 <a href="animations.html#fade" data-hash-list="fade" class="list-item list-child">Fade</a>
@@ -82,8 +76,6 @@
                 <a href="animations.html#raise" data-hash-list="raise" class="list-item list-child">Raise</a>
                 <a href="animations.html#pulse" data-hash-list="pulse" class="list-item list-child">Pulse</a>
               </ul>
-            </ul>
-            <ul class="card-menu">
               <ul class="list has-child">
                 <a class="list-item list-parent"><i class="icon ion-social-javascript"></i>JavaScript</a>
                 <a href="javascript.html#sidemenu" data-hash-list="sidemenu" class="list-item list-child">Sidemenu</a>
@@ -165,15 +157,18 @@
                   <div style="position: relative; height: 80px; margin: 0 20px;">
                     <header class="header">
                       <div class="header-left">
+                        <a class="drawer-open visible-xs" href="#" data-drawer-id="left">
+                          <i class="icon ion-navicon"></i>
+                        </a>
                         <a href="https://github.com/wktq/fluffy" target="_blank">
                           <i class="icon ion-social-github"></i>
                         </a>
                       </div>
                       <div class="header-content">
-                        <span class="logo-icon"></span><span class="logo">fluffy.css</span>
+                        <a href="index.html"><span class="logo-icon"></span><span class="logo">fluffy.css</span></a>
                       </div>
                       <div class="header-right">
-                        <button class="btn red"><i class="icon ion-code"></i>Get fluffy!</button>
+                        <button class="btn red dialog-button" data-dialog-id="get-fluffy"><i class="ion-archive"></i><span class="hidden-xs">&nbsp;Get fluffy!</span></button>
                       </div>
                     </header>
                   </div>
@@ -346,6 +341,54 @@
           Download & CDN
         </div>
       </div>
+    </div>
+    <div class="drawer left" data-drawer-id="left">
+      <a class="drawer-close drawer-close-btn"><i class="icon ion-close"></i></a>
+      <ul class="list has-child">
+        <a class="list-item list-parent"><i class="icon ion-checkmark"></i>Basic</a>
+        <a href="basic.html#flex-heading" data-hash-list="flex-heading" class="list-item list-child">Flex Heading</a>
+        <a href="basic.html#buttons" data-hash-list="buttons" class="list-item list-child">Buttons</a>
+        <a href="basic.html#forms" data-hash-list="forms" class="list-item list-child">Forms</a>
+        <a href="basic.html#lists" data-hash-list="lists" class="list-item list-child">Lists</a>
+        <a href="basic.html#tables" data-hash-list="tables" class="list-item list-child">Tables</a>
+      </ul>
+      <ul class="list has-child child-open">
+        <a class="list-item list-parent"><i class="icon ion-settings"></i>Element</a>
+        <a href="element.html#cards" data-hash-list="cards" class="list-item list-child">Cards</a>
+        <a href="element.html#header-and-footer" data-hash-list="header-and-footer" class="list-item list-child">Header & Footer</a>
+        <a href="element.html#paginations" data-hash-list="paginations" class="list-item list-child">Pagenations</a>
+        <a href="element.html#calendar" data-hash-list="calendar" class="list-item list-child">Calendar</a>
+        <a href="element.html#progress-bar" data-hash-list="progress-bar" class="list-item list-child">Progress Bar</a>
+        <a href="element.html#breadcrumbs" data-hash-list="breadcrumbs" class="list-item list-child">Breadcrumbs</a>
+        <a href="element.html#magic-box" data-hash-list="magic-box" class="list-item list-child">Magic box</a>
+        <a href="element.html#loading" data-hash-list="loading" class="list-item list-child">Loading</a>
+      </ul>
+      <ul class="list has-child">
+        <a class="list-item list-parent"><i class="icon ion-star"></i>Special</a>
+        <a href="special.html#iphone-mockup" data-hash-list="iphone-mockup" class="list-item list-child">iPhone mockup</a>
+        <a href="special.html#tweet" data-hash-list="tweet" class="list-item list-child">Tweet</a>
+        <a href="special.html#wizard" data-hash-list="wizard" class="list-item list-child">Wizard</a>
+        <a href="special.html#avatars" data-hash-list="avatars" class="list-item list-child">Avatars</a>
+        <a href="special.html#auto-complete" data-hash-list="auto-complete" class="list-item list-child">Auto Complete</a>
+      </ul>
+      <ul class="list has-child">
+        <a class="list-item list-parent"><i class="icon ion-film-marker"></i>Animations</a>
+        <a href="animations.html#fade" data-hash-list="fade" class="list-item list-child">Fade</a>
+        <a href="animations.html#slide" data-hash-list="slide" class="list-item list-child">Slide</a>
+        <a href="animations.html#zoom" data-hash-list="zoom" class="list-item list-child">Zoom</a>
+        <a href="animations.html#blur" data-hash-list="blur" class="list-item list-child">Blur</a>
+        <a href="animations.html#raise" data-hash-list="raise" class="list-item list-child">Raise</a>
+        <a href="animations.html#pulse" data-hash-list="pulse" class="list-item list-child">Pulse</a>
+      </ul>
+      <ul class="list has-child">
+        <a class="list-item list-parent"><i class="icon ion-social-javascript"></i>JavaScript</a>
+        <a href="javascript.html#sidemenu" data-hash-list="sidemenu" class="list-item list-child">Sidemenu</a>
+        <a href="javascript.html#dropdown" data-hash-list="dropdown" class="list-item list-child">Dropdown</a>
+        <a href="javascript.html#dialog" data-hash-list="dialog" class="list-item list-child">Dialog</a>
+        <a href="javascript.html#popover" data-hash-list="popover" class="list-item list-child">Popover</a>
+        <a href="javascript.html#slider" data-hash-list="slider" class="list-item list-child">Slider</a>
+        <a href="javascript.html#tabs" data-hash-list="tabs" class="list-item list-child">Tabs</a>
+      </ul>
     </div>
     <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
