@@ -86,12 +86,6 @@ function closeDrawer() {
   $('.drawer').removeClass('open');
 }
 
-if (window.mobilecheck()) {
-  $(document).bind('touchstart', '.drawer-overlay', function(e) {
-    closeDrawer();
-  });
-} else {
-  $(document).on('click', '.drawer-overlay', function(e) {
-    closeDrawer();
-  });
-}
+$(document).on('click', '.drawer-overlay', function(e) {
+  closeDrawer();
+});
