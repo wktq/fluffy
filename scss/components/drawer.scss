@@ -8,6 +8,7 @@
   background-color: #fff;
   z-index: 150;
   width: 72vw;
+  @include setPrefix(overflow-scrolling, touch);
 
   &.open {
     left: 0px;

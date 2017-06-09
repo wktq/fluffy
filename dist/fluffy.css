@@ -130,6 +130,26 @@
     text-align: center;
     width: 100%;
     line-height: 50px; }
+  .header.thin {
+    height: 42px; }
+    .header.thin .header-content {
+      line-height: 36px; }
+    .header.thin .header-left {
+      height: 42px;
+      line-height: 42px; }
+    .header.thin .header-right {
+      height: 42px;
+      line-height: 42px; }
+  .header.thick {
+    height: 60px; }
+    .header.thick .header-content {
+      line-height: 60px; }
+    .header.thick .header-left {
+      height: 60px;
+      line-height: 60px; }
+    .header.thick .header-right {
+      height: 60px;
+      line-height: 60px; }
   .header .header-left {
     position: absolute;
     left: 16px;
@@ -353,7 +373,11 @@ code {
   overflow-y: scroll;
   background-color: #fff;
   z-index: 150;
-  width: 72vw; }
+  width: 72vw;
+  overflow-scrolling: touch;
+  -moz-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
+  -o-overflow-scrolling: touch; }
   .drawer.open {
     left: 0px;
     -webkit-box-shadow: 1px 0 4px rgba(0, 0, 0, 0.3);

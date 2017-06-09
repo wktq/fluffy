@@ -15,6 +15,40 @@
     line-height: 50px;
   }
 
+  &.thin {
+    height: 42px;
+
+    .header-content {
+      line-height: 36px;
+    }
+
+    .header-left {
+      height: 42px;
+      line-height: 42px;
+    }
+    .header-right {
+      height: 42px;
+      line-height: 42px;
+    }
+  }
+
+  &.thick {
+    height: 60px;
+
+    .header-content {
+      line-height: 60px;
+    }
+
+    .header-left {
+      height: 60px;
+      line-height: 60px;
+    }
+    .header-right {
+      height: 60px;
+      line-height: 60px;
+    }
+  }
+
   .header-left {
     position: absolute;
     left: 16px;
