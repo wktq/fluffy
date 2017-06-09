@@ -350,7 +350,7 @@ code {
   top: 0;
   height: 100vh;
   overflow: hidden;
-  overflow-x: scroll;
+  overflow-y: scroll;
   background-color: #fff;
   z-index: 150;
   width: 72vw; }
