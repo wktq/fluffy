@@ -236,3 +236,17 @@ $(document).on('click', function(e) {
     }
   }
 });
+
+document.onkeydown = function(e){
+  if(!e) e = window.event; // レガシー
+  var openingModalId = $('.fv-modal.visible').data('fvModalId');
+
+  if (openingModalId != undefined) {
+    if (e.keyCode == 37) {
+      prevFvModal(openingModalId);
+    }
+    if (e.keyCode == 39) {
+      nextFvModal(openingModalId);
+    }
+  }
+};
