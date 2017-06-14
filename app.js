@@ -93,8 +93,14 @@ $(document).on('click', '.drawer-overlay', function(e) {
 // fluffy Viewer
 
 if ($('.fluffy-viewer')) {
-  var imageWidth = 100 / $('.fluffy-viewer').data('fvCol');
-  var imageGutter = $('.fluffy-viewer').data('fvGutter');
+
+  if ($(window).width() > 800) {
+    var imageWidth = 100 / $('.fluffy-viewer').data('fvCol');
+    var imageGutter = $('.fluffy-viewer').data('fvGutter');
+  } else {
+    var imageWidth = 50;
+    var imageGutter = $('.fluffy-viewer').data('fvGutter') / 2;
+  }
 
   $('.fluffy-viewer').find('img').each(function(i) {
     $(this).wrap("<div class='fv-image' data-fv-image-index=" + i + " style='width: " + imageWidth + "%; padding: " + imageGutter + "px'></div>");
@@ -116,7 +122,7 @@ if ($('.fluffy-viewer')) {
 
 function createFvModal(viewerId) {
   var viewer = $('[data-fv-viewer-id="' + viewerId + '"]');
-  $('body').append('<div class="fv-modal" data-fv-modal-id="' + viewerId + '">' + viewer.html() + '<div class="fv-nav"><p class="fv-nav-display"><span class="current-fv-index"></span> / <span class="current-fv-length"></span></p><a class="fv-nav-prev" data-fv-target-id="' + viewerId + '"><i class="icon ion-chevron-left"></i></a><a class="fv-nav-next" data-fv-target-id="' + viewerId + '"><i class="icon ion-chevron-right"></i></a></div></div>');
+  $('body').append('<div class="fv-modal" data-fv-modal-id="' + viewerId + '">' + viewer.html() + '<div class="fv-nav"><a class="fv-nav-close"><i class="icon ion-close"></i>CLOSE</a><p class="fv-nav-display"><span class="current-fv-index"></span> / <span class="current-fv-length"></span></p><a class="fv-nav-prev" data-fv-target-id="' + viewerId + '"><i class="icon ion-chevron-left"></i></a><a class="fv-nav-next" data-fv-target-id="' + viewerId + '"><i class="icon ion-chevron-right"></i></a></div></div>');
 }
 
 function openFvModal(viewerId, index) {

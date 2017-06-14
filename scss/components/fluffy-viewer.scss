@@ -75,6 +75,10 @@
     @include setPrefix(transition, all .1s ease-out);
     opacity: 0;
 
+    @media screen and (max-width:800px) {
+      width: 80% !important;
+    }
+
     &.current {
       left: 50%;
       opacity: 1;
@@ -114,6 +118,15 @@
         color: #fff;
         margin: 0;
       }
+
+      @media screen and (max-width:800px) {
+        right: 0;
+        padding: 16px 8px;
+
+        .icon {
+          font-size: 36px;
+        }
+      }
     }
 
     .fv-nav-prev {
@@ -130,6 +143,15 @@
         color: #fff;
         margin: 0;
       }
+
+      @media screen and (max-width:800px) {
+        left: 0;
+        padding: 16px 8px;
+
+        .icon {
+          font-size: 36px;
+        }
+      }
     }
 
     .fv-nav-display {
@@ -139,6 +161,20 @@
       letter-spacing: 2px;
       bottom: 5%;
       left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .fv-nav-close {
+      position: absolute;
+      top: 10%;
+      right: 16px;
+      color: #fff;
+      display: none;
+      z-index: 1500;
+
+      @media screen and (max-width:800px) {
+        display: block;
+      }
     }
   }
 }

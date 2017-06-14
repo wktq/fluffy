@@ -492,6 +492,9 @@ code {
     -webkit-transition: all 0.1s ease-out;
     -o-transition: all 0.1s ease-out;
     opacity: 0; }
+    @media screen and (max-width: 800px) {
+      .fv-modal .fv-image {
+        width: 80% !important; } }
     .fv-modal .fv-image.current {
       left: 50%;
       opacity: 1; }
@@ -517,6 +520,12 @@ code {
       font-size: 50px;
       color: #fff;
       margin: 0; }
+    @media screen and (max-width: 800px) {
+      .fv-modal .fv-nav .fv-nav-next {
+        right: 0;
+        padding: 16px 8px; }
+        .fv-modal .fv-nav .fv-nav-next .icon {
+          font-size: 36px; } }
   .fv-modal .fv-nav .fv-nav-prev {
     position: absolute;
     top: 50%;
@@ -529,13 +538,30 @@ code {
       font-size: 50px;
       color: #fff;
       margin: 0; }
+    @media screen and (max-width: 800px) {
+      .fv-modal .fv-nav .fv-nav-prev {
+        left: 0;
+        padding: 16px 8px; }
+        .fv-modal .fv-nav .fv-nav-prev .icon {
+          font-size: 36px; } }
   .fv-modal .fv-nav .fv-nav-display {
     position: fixed;
     color: #fff;
     font-size: 16px;
     letter-spacing: 2px;
     bottom: 5%;
-    left: 50%; }
+    left: 50%;
+    transform: translateX(-50%); }
+  .fv-modal .fv-nav .fv-nav-close {
+    position: absolute;
+    top: 10%;
+    right: 16px;
+    color: #fff;
+    display: none;
+    z-index: 1500; }
+    @media screen and (max-width: 800px) {
+      .fv-modal .fv-nav .fv-nav-close {
+        display: block; } }
 
 @keyframes show-fv-modal {
   0% {
