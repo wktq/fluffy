@@ -19,6 +19,7 @@ $set-prefix: '' , -moz- , -webkit-, -o-;
 @import './components/pagination.scss';
 @import './components/calendar.scss';
 @import './components/drawer.scss';
+@import './components/fluffy-viewer.scss';
 
 body {
   color: #353535;

@@ -89,3 +89,150 @@ function closeDrawer() {
 $(document).on('click', '.drawer-overlay', function(e) {
   closeDrawer();
 });
+
+// fluffy Viewer
+
+if ($('.fluffy-viewer')) {
+  var imageWidth = 100 / $('.fluffy-viewer').data('fvCol');
+  var imageGutter = $('.fluffy-viewer').data('fvGutter');
+
+  $('.fluffy-viewer').find('img').each(function(i) {
+    $(this).wrap("<div class='fv-image' data-fv-image-index=" + i + " style='width: " + imageWidth + "%; padding: " + imageGutter + "px'></div>");
+    $(this).before('<div class="fv-image-overlay" style="top: ' + imageGutter + 'px; left: ' + imageGutter + 'px; bottom: ' + imageGutter + 'px; right: ' + imageGutter + 'px"><i class="icon ion-image"></i></div>');
+  });
+
+  $('.fluffy-viewer').each(function(i) {
+    var viewerId = Date.now();
+    $(this).attr('data-fv-viewer-id', viewerId);
+    createFvModal(viewerId);
+  });
+
+  $(document).on('click', '.fv-image', function() {
+    var index = $(this).data('fvImageIndex');
+    var viewerId = $(this).parents('.fluffy-viewer').data('fvViewerId');
+    openFvModal(viewerId, index);
+  });
+}
+
+function createFvModal(viewerId) {
+  var viewer = $('[data-fv-viewer-id="' + viewerId + '"]');
+  $('body').append('<div class="fv-modal" data-fv-modal-id="' + viewerId + '">' + viewer.html() + '<div class="fv-nav"><p class="fv-nav-display"><span class="current-fv-index"></span> / <span class="current-fv-length"></span></p><a class="fv-nav-prev" data-fv-target-id="' + viewerId + '"><i class="icon ion-chevron-left"></i></a><a class="fv-nav-next" data-fv-target-id="' + viewerId + '"><i class="icon ion-chevron-right"></i></a></div></div>');
+}
+
+function openFvModal(viewerId, index) {
+  if (!$('.fv-modal.visible')[0]) {
+    var modal = $('[data-fv-modal-id="' + viewerId + '"]');
+    var currentImage = $('[data-fv-image-index="' + index + '"]');
+    var prevImage = $('[data-fv-image-index="' + (index - 1) + '"]');
+    var nextImage = $('[data-fv-image-index="' + (index + 1) + '"]');
+    var imageLength = modal.find('.fv-image').length;
+
+    currentImage.addClass('current');
+    prevImage.addClass('prev');
+    nextImage.addClass('next');
+
+    modal.addClass('visible');
+
+    $('.current-fv-index').text(index + 1);
+    $('.current-fv-length').text(imageLength);
+  }
+}
+
+function closeFvModal() {
+  $('.fv-modal').removeClass('visible');
+  $('.fv-modal .current').removeClass('current');
+  $('.fv-modal .prev').removeClass('prev');
+  $('.fv-modal .next').removeClass('next');
+}
+
+function nextFvModal(viewerId) {
+  var modal = $('[data-fv-modal-id="' + viewerId + '"]');
+  var currentIndex = modal.find('.fv-image.current').data('fvImageIndex');
+  var imageLength = modal.find('.fv-image').length;
+  console.log(imageLength);
+
+  if (currentIndex == (imageLength - 1)) {
+    console.log('this is last image');
+  } else {
+    var currentImage = $('[data-fv-image-index="' + (currentIndex + 1) + '"]');
+    var prevImage = $('[data-fv-image-index="' + currentIndex + '"]');
+    var nextImage = $('[data-fv-image-index="' + (currentIndex + 2) + '"]');
+
+    $('.current').removeClass('current');
+    $('.prev').removeClass('prev');
+    $('.next').removeClass('next');
+
+    currentImage.addClass('current');
+    prevImage.addClass('prev');
+    nextImage.addClass('next');
+
+    $('.current-fv-index').text(currentIndex + 2);
+    $('.current-fv-length').text(imageLength);
+  }
+}
+
+function prevFvModal(viewerId) {
+  var modal = $('[data-fv-modal-id="' + viewerId + '"]');
+  var currentIndex = modal.find('.fv-image.current').data('fvImageIndex');
+  var imageLength = modal.find('.fv-image').length;
+
+  if (currentIndex == 0) {
+    console.log('this is first image');
+  } else {
+    var currentImage = $('[data-fv-image-index="' + (currentIndex - 1) + '"]');
+    var prevImage = $('[data-fv-image-index="' + (currentIndex - 2) + '"]');
+    var nextImage = $('[data-fv-image-index="' + currentIndex + '"]');
+
+    $('.current').removeClass('current');
+    $('.prev').removeClass('prev');
+    $('.next').removeClass('next');
+
+    currentImage.addClass('current');
+    prevImage.addClass('prev');
+    nextImage.addClass('next');
+
+    $('.current-fv-index').text(currentIndex);
+    $('.current-fv-length').text(imageLength);
+  }
+}
+
+fvAllowed = true;
+
+$(document).on('click', '.fv-nav-next', function () {
+  console.log(fvAllowed);
+
+  if (fvAllowed) {
+    var viewerId = $(this).data('fvTargetId');
+    nextFvModal(viewerId);
+    fvAllowed = false;
+
+    setTimeout(function(){
+      fvAllowed = true;
+    },100);
+  }
+});
+
+
+$(document).on('click', '.fv-nav-prev', function () {
+  console.log(fvAllowed);
+
+  if (fvAllowed) {
+    var viewerId = $(this).data('fvTargetId');
+    prevFvModal(viewerId);
+    fvAllowed = false;
+
+    setTimeout(function(){
+      fvAllowed = true;
+    },100);
+  }
+});
+
+$(document).on('click', function(e) {
+  if (!$(e.target).closest('.fv-image').length) {
+    if (!$(e.target).closest('.fv-nav-next').length) {
+      if (!$(e.target).closest('.fv-nav-prev').length) {
+        closeFvModal();
+      }
+    }
+  }
+});

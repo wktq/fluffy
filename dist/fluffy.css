@@ -425,6 +425,123 @@ code {
   100% {
     left: 0vw; } }
 
+.fluffy-viewer {
+  font-size: 0; }
+  .fluffy-viewer img {
+    display: inline-block; }
+  .fluffy-viewer .fv-image {
+    display: inline-block;
+    padding: 4px;
+    position: relative;
+    cursor: pointer;
+    user-select: none; }
+    .fluffy-viewer .fv-image .fv-image-overlay {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      bottom: 4px;
+      left: 4px;
+      background-color: rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      transition: all 0.15s ease-in-out;
+      -moz-transition: all 0.15s ease-in-out;
+      -webkit-transition: all 0.15s ease-in-out;
+      -o-transition: all 0.15s ease-in-out; }
+      .fluffy-viewer .fv-image .fv-image-overlay:hover {
+        opacity: 1; }
+      .fluffy-viewer .fv-image .fv-image-overlay .icon {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        font-size: 32px;
+        line-height: 32px;
+        color: #fff; }
+    .fluffy-viewer .fv-image img {
+      width: 100% !important; }
+
+.fv-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 100;
+  opacity: 0;
+  display: none;
+  white-space: nowrap; }
+  .fv-modal.visible {
+    opacity: 1;
+    display: block;
+    animation: show-fv-modal .5s; }
+  .fv-modal .fv-image {
+    display: inline-block;
+    padding: 4px;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    position: absolute;
+    width: 25% !important;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 0;
+    transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out;
+    -webkit-transition: all 0.1s ease-out;
+    -o-transition: all 0.1s ease-out;
+    opacity: 0; }
+    .fv-modal .fv-image.current {
+      left: 50%;
+      opacity: 1; }
+    .fv-modal .fv-image.prev {
+      left: 40%; }
+    .fv-modal .fv-image.next {
+      left: 60%; }
+    .fv-modal .fv-image .fv-image-overlay {
+      display: none; }
+    .fv-modal .fv-image img {
+      width: 100% !important; }
+  .fv-modal .fv-nav .fv-nav-next {
+    position: absolute;
+    top: 50%;
+    padding: 48px;
+    right: 30%;
+    transform: translateY(-50%);
+    z-index: 150;
+    cursor: pointer; }
+    .fv-modal .fv-nav .fv-nav-next .icon {
+      font-size: 50px;
+      color: #fff;
+      margin: 0; }
+  .fv-modal .fv-nav .fv-nav-prev {
+    position: absolute;
+    top: 50%;
+    padding: 48px;
+    left: 30%;
+    transform: translateY(-50%);
+    z-index: 150;
+    cursor: pointer; }
+    .fv-modal .fv-nav .fv-nav-prev .icon {
+      font-size: 50px;
+      color: #fff;
+      margin: 0; }
+  .fv-modal .fv-nav .fv-nav-display {
+    position: fixed;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 2px;
+    bottom: 10%;
+    left: 50%; }
+
+@keyframes show-fv-modal {
+  0% {
+    display: block;
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 body {
   color: #353535;
   background-color: #F6F9FC;

@@ -1,0 +1,152 @@
+.fluffy-viewer{
+  font-size: 0;
+
+  img {
+    display: inline-block;
+  }
+
+  .fv-image {
+    display: inline-block;
+    padding: 4px;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+
+    .fv-image-overlay {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      bottom: 4px;
+      left: 4px;
+      background-color: rgba(0,0,0,.3);
+      opacity: 0;
+      @include setPrefix(transition, all .15s ease-in-out);
+
+      &:hover {
+          opacity: 1;
+      }
+
+      .icon {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        font-size: 32px;
+        line-height: 32px;
+        color: #fff;
+      }
+    }
+
+    img {
+      width: 100% !important;
+    }
+  }
+}
+.fv-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.45);
+  z-index: 100;
+  opacity: 0;
+  display: none;
+  white-space: nowrap;
+
+  &.visible {
+    opacity: 1;
+    display: block;
+    animation: show-fv-modal .5s;
+  }
+
+  .fv-image {
+    display: inline-block;
+    padding: 4px;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    position: absolute;
+    width: 25% !important;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 0;
+    @include setPrefix(transition, all .1s ease-out);
+    opacity: 0;
+
+    &.current {
+      left: 50%;
+      opacity: 1;
+    }
+
+    &.prev {
+      left: 40%;
+    }
+
+    &.next {
+      left: 60%;
+    }
+
+    .fv-image-overlay {
+      display: none;
+    }
+
+    img {
+      width: 100% !important;
+    }
+  }
+
+  .fv-nav {
+    .fv-nav-next {
+      position: absolute;
+      top: 50%;
+      padding: 48px;
+      right: 30%;
+      transform: translateY(-50%);
+      z-index: 150;
+      cursor: pointer;
+
+      .icon {
+        font-size: 50px;
+        color: #fff;
+        margin: 0;
+      }
+    }
+
+    .fv-nav-prev {
+      position: absolute;
+      top: 50%;
+      padding: 48px;
+      left: 30%;
+      transform: translateY(-50%);
+      z-index: 150;
+      cursor: pointer;
+
+      .icon {
+        font-size: 50px;
+        color: #fff;
+        margin: 0;
+      }
+    }
+
+    .fv-nav-display {
+      position: fixed;
+      color: #fff;
+      font-size: 16px;
+      letter-spacing: 2px;
+      bottom: 10%;
+      left: 50%;
+    }
+  }
+}
+
+@keyframes show-fv-modal {
+  0% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
