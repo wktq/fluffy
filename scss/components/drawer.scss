@@ -7,7 +7,7 @@
   background-color: #fff;
   z-index: 49;
   @include setPrefix(overflow-scrolling, touch);
-  left: 240px;
+  left: -240px;
   width: 240px;
 
   @media screen and (max-width:400px) {

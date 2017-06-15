@@ -379,7 +379,7 @@ code {
   -moz-overflow-scrolling: touch;
   -webkit-overflow-scrolling: touch;
   -o-overflow-scrolling: touch;
-  left: 240px;
+  left: -240px;
   width: 240px; }
   @media screen and (max-width: 400px) {
     .drawer {
