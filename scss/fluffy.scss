@@ -20,6 +20,7 @@ $set-prefix: '' , -moz- , -webkit-, -o-;
 @import './components/calendar.scss';
 @import './components/drawer.scss';
 @import './components/fluffy-viewer.scss';
+@import './components/badge.scss';
 
 body {
   color: #353535;

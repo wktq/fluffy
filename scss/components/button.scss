@@ -54,6 +54,117 @@
     background-color: #000;
     color: #fff;
   }
+
+  &.outline {
+    background-color: transparent;
+    box-shadow: none;
+    border: 1px solid transparent;
+
+    &:hover, &:focus, &:active {
+      outline: none !important;
+      border: 1px solid transparent;
+      color: #fff !important;
+    }
+
+    &:hover {
+      box-shadow: none;
+    }
+
+    &:focus, &:active {
+      opacity: 1;
+    }
+
+    &.red {
+      border-color: #F44336;
+      color: #F44336;
+
+      &:hover, &:focus, &:active {
+        outline: none !important;
+        background-color: #F44336;
+      }
+    }
+    &.blue {
+      border-color: #2196F3;
+      color: #2196F3;
+
+      &:hover, &:focus, &:active {
+        outline: none !important;
+        background-color: #2196F3;
+      }
+    }
+    &.green {
+      border-color: #4CB050;
+      color: #4CB050;
+
+      &:hover, &:focus, &:active {
+        outline: none !important;
+        background-color: #4CB050;
+      }
+    }
+    &.orange {
+      border-color: #FF9800;
+      color: #FF9800;
+
+      &:hover, &:focus, &:active {
+        outline: none !important;
+        background-color: #FF9800;
+      }
+    }
+    &.purple {
+      border-color: #9C27B0;
+      color: #9C27B0;
+
+      &:hover, &:focus, &:active {
+        outline: none !important;
+        background-color: #9C27B0;
+      }
+    }
+    &.pink {
+      border-color: #FF4EC2;
+      color: #FF4EC2;
+
+      &:hover, &:focus, &:active {
+        outline: none !important;
+        background-color: #FF4EC2;
+      }
+    }
+    &.dark {
+      border-color: #353535;
+      color: #353535;
+
+      &:hover, &:focus, &:active {
+        outline: none !important;
+        background-color: #353535;
+      }
+    }
+    &.black {
+      border-color: #000;
+      color: #000;
+
+      &:hover, &:focus, &:active {
+        outline: none !important;
+        background-color: #000;
+      }
+    }
+  }
+
+  &.flat {
+    box-shadow: none;
+    border: 1px solid transparent;
+
+    &:hover, &:focus, &:active {
+      outline: none !important;
+      opacity: 0.8;
+    }
+
+    &:hover {
+      box-shadow: none;
+    }
+
+    &:focus, &:active {
+      opacity: 1;
+    }
+  }
 }
 
 .btn-block {

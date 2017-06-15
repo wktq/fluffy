@@ -21,6 +21,15 @@
     text-decoration: none;
     color: #555;
     border-top: 1px solid #eee;
+    position: relative;
+
+    &.thin {
+      padding: 5px 16px;
+    }
+
+    &.thick {
+      padding: 10px 16px;
+    }
   }
 
   .list-parent {
@@ -65,6 +74,25 @@
       background-color: red !important;
       top: calc(50% - 3px);
       left: 24px;
+    }
+  }
+
+  .list-search-box {
+    background-color: #333;
+    text-align: center;
+    padding: 16px 8px;
+
+    input {
+      width: 100%;
+      background-color: #555;
+      border: solid 1px #555;
+      color: #ddd;
+      border-radius: 3px;
+      padding: 4px 12px;
+
+      &:focus {
+        outline: none;
+      }
     }
   }
 }

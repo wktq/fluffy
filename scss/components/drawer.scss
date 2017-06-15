@@ -19,9 +19,18 @@
     background-color: #333;
     color: #fff;
 
-    .list-item {
+    .list {
       border-color: #242424;
+    }
+
+    .list-item {
+      border: none;
       color: #e5e5e5;
+      background-color: #333;
+
+      &:hover, &.active {
+        background-color: #222;
+      }
     }
   }
 

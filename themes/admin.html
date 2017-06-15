@@ -32,16 +32,16 @@
     <div class="screen" style="padding-left: 240px; margin-top: 50px">
       <div class="alert borderless alert-success" role="alert" style="margin-top: -50px">
         Would you like to back?
-        <a href="../index.html" class="btn green alert-btn"><i class="icon ion-arrow-return-left"></i>Return to fluffy</a>
+        <a href="../index.html" class="btn flat green alert-btn"><i class="icon ion-arrow-return-left"></i>Return to fluffy</a>
       </div>
       <div class="main-content">
         <h3>Dashboard</h3>
       </div>
     </div>
     <div class="drawer dark fixed">
-      <div class="media">
+      <div class="media user-box">
         <div class="media-left">
-          <img src="https://s3.amazonaws.com/uifaces/faces/twitter/sauro/128.jpg" class="media-object" style="width:60px">
+          <img src="https://s3.amazonaws.com/uifaces/faces/twitter/sauro/128.jpg" class="media-object" style="width:60px; border-radius: 50%">
         </div>
         <div class="media-body">
           <h4 class="media-heading">John Doe</h4>
@@ -49,12 +49,31 @@
         </div>
       </div>
       <ul class="list">
-        <a class="list-item"><i class="icon ion-filing"></i>Themes</a>
-        <a class="list-item"><i class="icon ion-filing"></i>Themes</a>
-        <a class="list-item"><i class="icon ion-filing"></i>Themes</a>
-        <a class="list-item"><i class="icon ion-filing"></i>Themes</a>
-        <a class="list-item"><i class="icon ion-filing"></i>Themes</a>
-        <a class="list-item"><i class="icon ion-filing"></i>Themes</a>
+        <div class="list-search-box dark">
+          <input type="text" name="" value="" placeholder="Search for...">
+        </div>
+        <a class="list-item thick active">
+          <i class="icon ion-speedometer"></i>Dashboard
+        </a>
+        <a class="list-item thick">
+          <i class="icon ion-android-apps"></i>Widgets
+          <span class="badge"></span>
+        </a>
+        <a class="list-item thick">
+          <i class="icon ion-settings"></i>UI Elements
+          <span class="badge">14</span>
+        </a>
+        <a class="list-item thick">
+          <i class="icon ion-android-clipboard"></i>Forms
+        </a>
+        <a class="list-item thick">
+          <i class="icon ion-calendar"></i>Calendar
+          <span class="badge blue"><i class="icon ion-edit"></i></span>
+        </a>
+        <a class="list-item thick"><i class="icon ion-document"></i>
+          Extra Pages
+          <span class="badge blue">New!</span>
+        </a>
       </ul>
     </div>
     <script
@@ -68,7 +87,7 @@
     <style media="screen">
       .alert {
         margin-top: -50px;
-        transition: all .5s ease-out;
+        transition: all .2s ease-out;
       }
 
       .alert.show {
@@ -77,6 +96,23 @@
 
       .main-content {
         padding: 0 8px;
+      }
+
+      .user-box {
+        padding: 32px 16px;
+      }
+
+      .drawer {
+        box-shadow: 0 0 4px rgba(0,0,0,.55);
+      }
+
+      .logo-icon {
+        width: 14px;
+        height: 14px;
+      }
+
+      .logo {
+        font-size: 18px;
       }
 
     </style>
