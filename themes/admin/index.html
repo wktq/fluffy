@@ -5,7 +5,7 @@
     <title>Fluffy</title>
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../dist/fluffy.css">
+    <link rel="stylesheet" href="../../dist/fluffy.css">
     <link href="https://fonts.googleapis.com/css?family=Coda|Poppins:300,400,500,600" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -13,6 +13,37 @@
       .icon {
         margin-right: 0.8rem;
       }
+
+      .alert {
+        margin-top: -50px;
+        transition: all .2s ease-out;
+      }
+
+      .alert.show {
+        margin-top: 0px !important;
+      }
+
+      .main-content {
+        padding: 0 8px;
+      }
+
+      .user-box {
+        padding: 32px 16px;
+      }
+
+      .drawer {
+        box-shadow: 0 0 4px rgba(0,0,0,.55);
+      }
+
+      .logo-icon {
+        width: 14px;
+        height: 14px;
+      }
+
+      .logo {
+        font-size: 18px;
+      }
+
     </style>
   </head>
   <body>
@@ -52,25 +83,25 @@
         <div class="list-search-box dark">
           <input type="text" name="" value="" placeholder="Search for...">
         </div>
-        <a class="list-item thick active">
+        <a href="index.html" class="list-item thick active">
           <i class="icon ion-speedometer"></i>Dashboard
         </a>
-        <a class="list-item thick">
+        <a href="index.html" class="list-item thick">
           <i class="icon ion-android-apps"></i>Widgets
           <span class="badge"></span>
         </a>
-        <a class="list-item thick">
+        <a href="index.html" class="list-item thick">
           <i class="icon ion-settings"></i>UI Elements
           <span class="badge">14</span>
         </a>
-        <a class="list-item thick">
+        <a href="index.html" class="list-item thick">
           <i class="icon ion-android-clipboard"></i>Forms
         </a>
-        <a class="list-item thick">
+        <a href="index.html" class="list-item thick">
           <i class="icon ion-calendar"></i>Calendar
           <span class="badge blue"><i class="icon ion-edit"></i></span>
         </a>
-        <a class="list-item thick"><i class="icon ion-document"></i>
+        <a href="index.html" class="list-item thick"><i class="icon ion-document"></i>
           Extra Pages
           <span class="badge blue">New!</span>
         </a>
@@ -80,41 +111,9 @@
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
-    <script src="../app.js" charset="utf-8"></script>
+    <script src="../../app.js" charset="utf-8"></script>
     <script type="text/javascript">
       $('.alert').addClass('show');
     </script>
-    <style media="screen">
-      .alert {
-        margin-top: -50px;
-        transition: all .2s ease-out;
-      }
-
-      .alert.show {
-        margin-top: 0px !important;
-      }
-
-      .main-content {
-        padding: 0 8px;
-      }
-
-      .user-box {
-        padding: 32px 16px;
-      }
-
-      .drawer {
-        box-shadow: 0 0 4px rgba(0,0,0,.55);
-      }
-
-      .logo-icon {
-        width: 14px;
-        height: 14px;
-      }
-
-      .logo {
-        font-size: 18px;
-      }
-
-    </style>
   </body>
 </html>
