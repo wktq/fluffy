@@ -84,8 +84,12 @@ a {
   }
 }
 
-.alert.borderless {
-  border-radius: 0px !important;
-  border: none;
-  box-shadow: 1px 0 4px rgba(0,0,0,.3);
+.alert {
+  position: relative;
+
+  &.borderless {
+    border-radius: 0px !important;
+    border: none;
+    box-shadow: 1px 0 4px rgba(0,0,0,.3);
+  }
 }

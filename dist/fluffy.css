@@ -113,6 +113,12 @@
 .btn-block {
   display: block; }
 
+.alert-btn {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%); }
+
 .header {
   background-color: #fff;
   position: absolute;
@@ -391,18 +397,15 @@ code {
     .drawer.dark .list-item {
       border-color: #242424;
       color: #e5e5e5; }
+  .drawer.open, .drawer.fixed {
+    left: 0px; }
+    .drawer.open .drawer-close-btn, .drawer.fixed .drawer-close-btn {
+      display: block; }
   .drawer.open {
-    left: 0px;
-    -webkit-box-shadow: 1px 0 4px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 1px 0 4px rgba(0, 0, 0, 0.3);
-    -o-box-shadow: 1px 0 4px rgba(0, 0, 0, 0.3);
-    box-shadow: 1px 0 4px rgba(0, 0, 0, 0.3);
     animation: show-drawer 0.5s;
     -moz-animation: show-drawer 0.5s;
     -webkit-animation: show-drawer 0.5s;
     -o-animation: show-drawer 0.5s; }
-    .drawer.open .drawer-close-btn {
-      display: block; }
   .drawer .drawer-close-btn {
     position: absolute;
     right: -36px;
@@ -643,7 +646,9 @@ a {
 .card .card .card-body {
   background-color: #fff; }
 
-.alert.borderless {
-  border-radius: 0px !important;
-  border: none;
-  box-shadow: 1px 0 4px rgba(0, 0, 0, 0.3); }
+.alert {
+  position: relative; }
+  .alert.borderless {
+    border-radius: 0px !important;
+    border: none;
+    box-shadow: 1px 0 4px rgba(0, 0, 0, 0.3); }

@@ -59,3 +59,10 @@
 .btn-block {
   display: block;
 }
+
+.alert-btn {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}

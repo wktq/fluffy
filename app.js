@@ -61,7 +61,12 @@ window.mobilecheck = function() {
 
 $('.drawer-open').on('click', function() {
   var drawerId = $(this).data('drawer-id');
-  openDrawer(drawerId);
+
+  if ($('.drawer[data-drawer-id="' + drawerId + '"]').hasClass('open')) {
+    closeDrawer();
+  } else {
+    openDrawer(drawerId);
+  }
 });
 $('.drawer-close').on('click', function() {
   var drawerId = $(this).data('drawer-id');

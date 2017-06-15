@@ -25,17 +25,16 @@
     }
   }
 
-  &.open {
+  &.open, &.fixed {
     left: 0px;
-    -webkit-box-shadow: 1px 0 4px rgba(0,0,0,.3);
-    -moz-box-shadow: 1px 0 4px rgba(0,0,0,.3);
-    -o-box-shadow: 1px 0 4px rgba(0,0,0,.3);
-    box-shadow: 1px 0 4px rgba(0,0,0,.3);
-    @include setPrefix(animation, show-drawer .5s);
 
     .drawer-close-btn {
       display: block;
     }
+  }
+
+  &.open {
+    @include setPrefix(animation, show-drawer .5s);
   }
 
   .drawer-close-btn {
