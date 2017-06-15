@@ -29,10 +29,12 @@ body {
 
 a {
   color: #0091EA;
+  text-decoration: none;
   @include setPrefix(transition, all .15s ease-in-out);
 
   &:hover {
     color: #01579B;
+    text-decoration: none;
   }
 }
 
@@ -80,4 +82,10 @@ a {
   .card-body {
     background-color: #fff;
   }
+}
+
+.alert.borderless {
+  border-radius: 0px !important;
+  border: none;
+  box-shadow: 1px 0 4px rgba(0,0,0,.3);
 }

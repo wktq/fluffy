@@ -1,14 +1,29 @@
 .drawer {
   position: fixed;
-  left: -72vw;
-  top: 0;
+  top: 50px;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: scroll;
   background-color: #fff;
-  z-index: 150;
-  width: 72vw;
+  z-index: 49;
   @include setPrefix(overflow-scrolling, touch);
+  left: 240px;
+  width: 240px;
+
+  @media screen and (max-width:400px) {
+    left: -72vw;
+    width: 72vw;
+  }
+
+  &.dark {
+    background-color: #333;
+    color: #fff;
+
+    .list-item {
+      border-color: #242424;
+      color: #e5e5e5;
+    }
+  }
 
   &.open {
     left: 0px;
@@ -44,7 +59,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 149;
+  z-index: 45;
   opacity: 0;
   background-color: rgba(0,0,0,.3);
   @include setPrefix(transition, all .2s ease-out);

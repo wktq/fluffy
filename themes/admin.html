@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Fluffy</title>
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../dist/fluffy.css">
+    <link href="https://fonts.googleapis.com/css?family=Coda|Poppins:300,400,500,600" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style media="screen">
+      .icon {
+        margin-right: 0.8rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header fixed">
+      <div class="header-left" style="width: 240px; text-align: center; left: 0px; display: block; border-right: 1px solid #ddd">
+        <p>
+          <a href="index.html" style="white-space: nowrap"><span class="logo-icon"></span><span class="logo" style="white-space: nowrap">fluffy Admin</span></a>
+        </p>
+      </div>
+      <div class="header-content">
+
+      </div>
+      <div class="header-right">
+        <button class="btn red dialog-button" data-dialog-id="get-fluffy"><i class="ion-archive"></i><span class="hidden-xs">&nbsp;Get fluffy!</span></button>
+      </div>
+    </header>
+    <div class="screen" style="padding-left: 240px; margin-top: 50px">
+      <div class="alert borderless alert-success" role="alert" style="margin-top: -50px">
+        Would you like to back?
+        <a href="/" class="btn red"></a>
+      </div>
+      <div class="main-content">
+        <h3>Dashboard</h3>
+      </div>
+    </div>
+    <div class="drawer dark open">
+      <div class="media">
+        <div class="media-left">
+          <img src="https://s3.amazonaws.com/uifaces/faces/twitter/sauro/128.jpg" class="media-object" style="width:60px">
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">John Doe</h4>
+          <p>Lorem ipsum...</p>
+        </div>
+      </div>
+      <ul class="list">
+        <a class="list-item"><i class="icon ion-filing"></i>Themes</a>
+        <a class="list-item"><i class="icon ion-filing"></i>Themes</a>
+        <a class="list-item"><i class="icon ion-filing"></i>Themes</a>
+        <a class="list-item"><i class="icon ion-filing"></i>Themes</a>
+        <a class="list-item"><i class="icon ion-filing"></i>Themes</a>
+        <a class="list-item"><i class="icon ion-filing"></i>Themes</a>
+      </ul>
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script src="../app.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $('.alert').addClass('show');
+    </script>
+    <style media="screen">
+      .alert {
+        margin-top: -50px;
+        transition: all .5s ease-out;
+      }
+
+      .alert.show {
+        margin-top: 0px !important;
+      }
+
+      .main-content {
+        padding: 0 8px;
+      }
+
+    </style>
+  </body>
+</html>
