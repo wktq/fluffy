@@ -46,10 +46,11 @@
     border: 2px solid #000;
     overflow-y: scroll;
     overflow-x: hidden;
-
+    z-index: 200;
+    
     .iphone-mockup-display-inner {
-      position: relative;
-      height: 100vh;
+      height: 100%;
+      overflow: scroll;
     }
   }
 
