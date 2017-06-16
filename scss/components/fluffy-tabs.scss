@@ -1,4 +1,6 @@
 .fluffy-tabs {
+  width: 100%;
+  overflow: hidden;
 
   &.scrollable {
     .fluffy-tabs-nav {
@@ -13,8 +15,6 @@
     border: none;
     border-bottom: 1px solid #ddd;
     background-color: #fff;
-
-
 
     .fluffy-tabs-nav-inner {
       width: 100%;
@@ -66,10 +66,12 @@
   margin: auto;
   padding: 16px 0;
   background-color: #fff;
+  overflow-y: hidden;
 }
 
 .fluffy-tabs-content {
   display: none;
+  overflow-y: hidden;
 
   &.active {
     animation: fade-in-left 1s;

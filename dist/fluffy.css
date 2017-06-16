@@ -703,7 +703,12 @@ code {
     position: absolute;
     top: 10%;
     border-radius: 1%;
-    border: 2px solid #000; }
+    border: 2px solid #000;
+    overflow-y: scroll;
+    overflow-x: hidden; }
+    .iphone-mockup .iphone-mockup-display .iphone-mockup-display-inner {
+      position: relative;
+      height: 100vh; }
   .iphone-mockup .iphone-mockup-homebutton {
     position: absolute;
     width: 15.4582712%;
@@ -943,57 +948,60 @@ code {
     display: block;
     opacity: 1; } }
 
-.fluffy-tabs.scrollable .fluffy-tabs-nav {
-  white-space: nowrap;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  position: relative; }
-
-.fluffy-tabs .fluffy-tabs-nav {
-  border: none;
-  border-bottom: 1px solid #ddd;
-  background-color: #fff; }
-  .fluffy-tabs .fluffy-tabs-nav .fluffy-tabs-nav-inner {
-    width: 100%;
-    max-width: 1080px;
-    margin: auto;
-    padding: 0;
-    font-size: 0; }
-  .fluffy-tabs .fluffy-tabs-nav a {
-    letter-spacing: 1px;
-    padding: 12px 20px;
-    font-size: 13px;
-    color: #757575;
-    text-align: center;
-    display: inline-block; }
-
-.fluffy-tabs .fluffy-tabs-link {
-  cursor: pointer;
-  position: relative; }
-  .fluffy-tabs .fluffy-tabs-link:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 2px;
-    width: 0%;
-    background-color: #333; }
-  .fluffy-tabs .fluffy-tabs-link:hover:after, .fluffy-tabs .fluffy-tabs-link.active:after {
-    width: 100%;
-    animation: appear-bar 0.3s; }
-  .fluffy-tabs .fluffy-tabs-link.active {
-    font-weight: bold; }
+.fluffy-tabs {
+  width: 100%;
+  overflow: hidden; }
+  .fluffy-tabs.scrollable .fluffy-tabs-nav {
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    position: relative; }
+  .fluffy-tabs .fluffy-tabs-nav {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff; }
+    .fluffy-tabs .fluffy-tabs-nav .fluffy-tabs-nav-inner {
+      width: 100%;
+      max-width: 1080px;
+      margin: auto;
+      padding: 0;
+      font-size: 0; }
+    .fluffy-tabs .fluffy-tabs-nav a {
+      letter-spacing: 1px;
+      padding: 12px 20px;
+      font-size: 13px;
+      color: #757575;
+      text-align: center;
+      display: inline-block; }
+  .fluffy-tabs .fluffy-tabs-link {
+    cursor: pointer;
+    position: relative; }
+    .fluffy-tabs .fluffy-tabs-link:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 2px;
+      width: 0%;
+      background-color: #333; }
+    .fluffy-tabs .fluffy-tabs-link:hover:after, .fluffy-tabs .fluffy-tabs-link.active:after {
+      width: 100%;
+      animation: appear-bar 0.3s; }
+    .fluffy-tabs .fluffy-tabs-link.active {
+      font-weight: bold; }
 
 .fluffy-tabs-contents {
   width: 100%;
   max-width: 1080px;
   margin: auto;
   padding: 16px 0;
-  background-color: #fff; }
+  background-color: #fff;
+  overflow-y: hidden; }
 
 .fluffy-tabs-content {
-  display: none; }
+  display: none;
+  overflow-y: hidden; }
   .fluffy-tabs-content.active {
     animation: fade-in-left 1s;
     opacity: 1;
