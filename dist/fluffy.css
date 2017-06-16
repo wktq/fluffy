@@ -550,7 +550,7 @@ code {
       right: 4px;
       bottom: 4px;
       left: 4px;
-      background-color: rgba(0, 0, 0, 0.3);
+      background-color: rgba(0, 0, 0, 0.95);
       opacity: 0;
       transition: all 0.15s ease-in-out;
       -moz-transition: all 0.15s ease-in-out;
@@ -576,7 +576,7 @@ code {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: rgba(0, 0, 0, 0.95);
   z-index: 100;
   opacity: 0;
   display: none;
@@ -592,7 +592,7 @@ code {
     cursor: pointer;
     user-select: none;
     position: absolute;
-    width: 30% !important;
+    width: 35% !important;
     top: 50%;
     transform: translate(-50%, -50%);
     left: 0;
@@ -615,13 +615,13 @@ code {
       display: none; }
     .fv-modal .fv-image img {
       width: 100% !important;
-      height: 75vh;
+      height: 90vh;
       object-fit: scale-down; }
   .fv-modal .fv-nav .fv-nav-next {
     position: absolute;
     top: 50%;
-    padding: 48px;
-    right: 28%;
+    padding: 50vh 60px;
+    right: 22.5%;
     transform: translateY(-50%);
     z-index: 150;
     cursor: pointer; }
@@ -632,14 +632,14 @@ code {
     @media screen and (max-width: 800px) {
       .fv-modal .fv-nav .fv-nav-next {
         right: 0;
-        padding: 16px 8px; }
+        padding: 50vh 8px; }
         .fv-modal .fv-nav .fv-nav-next .icon {
           font-size: 36px; } }
   .fv-modal .fv-nav .fv-nav-prev {
     position: absolute;
     top: 50%;
-    padding: 48px;
-    left: 28%;
+    padding: 50vh 60px;
+    left: 22.5%;
     transform: translateY(-50%);
     z-index: 150;
     cursor: pointer; }
@@ -650,7 +650,7 @@ code {
     @media screen and (max-width: 800px) {
       .fv-modal .fv-nav .fv-nav-prev {
         left: 0;
-        padding: 16px 8px; }
+        padding: 50vh 8px; }
         .fv-modal .fv-nav .fv-nav-prev .icon {
           font-size: 36px; } }
   .fv-modal .fv-nav .fv-nav-display {
@@ -658,25 +658,30 @@ code {
     color: #fff;
     font-size: 16px;
     letter-spacing: 2px;
-    bottom: 5%;
+    bottom: 0;
+    line-height: 5vh;
     left: 50%;
     transform: translateX(-50%); }
   .fv-modal .fv-nav .fv-nav-close {
     position: absolute;
-    top: 10%;
-    right: 16px;
+    top: 5%;
+    line-height: 40px;
+    right: 10%;
     color: #fff;
-    display: none;
-    z-index: 1500; }
+    display: block;
+    z-index: 1500;
+    cursor: pointer; }
     @media screen and (max-width: 800px) {
       .fv-modal .fv-nav .fv-nav-close {
-        display: block; } }
+        top: 5%;
+        right: 16px; } }
 
 @keyframes show-fv-modal {
   0% {
     display: block;
     opacity: 0; }
   100% {
+    display: block;
     opacity: 1; } }
 
 .badge {
@@ -731,7 +736,7 @@ code {
 body {
   color: #353535;
   background-color: #F6F9FC;
-  font-family: 'Poppins'; }
+  font-family: 'Quicksand'; }
 
 a {
   color: #0091EA;

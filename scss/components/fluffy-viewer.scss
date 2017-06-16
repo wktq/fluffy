@@ -18,7 +18,7 @@
       right: 4px;
       bottom: 4px;
       left: 4px;
-      background-color: rgba(0,0,0,.3);
+      background-color: rgba(0,0,0,.95);
       opacity: 0;
       @include setPrefix(transition, all .15s ease-in-out);
 
@@ -49,7 +49,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0,0,0,.45);
+  background-color: rgba(0,0,0,.95);
   z-index: 100;
   opacity: 0;
   display: none;
@@ -68,7 +68,7 @@
     cursor: pointer;
     user-select: none;
     position: absolute;
-    width: 30% !important;
+    width: 35% !important;
     top: 50%;
     transform: translate(-50%, -50%);
     left: 0;
@@ -98,7 +98,7 @@
 
     img {
       width: 100% !important;
-      height: 75vh;
+      height: 90vh;
       object-fit: scale-down;
     }
   }
@@ -107,8 +107,8 @@
     .fv-nav-next {
       position: absolute;
       top: 50%;
-      padding: 48px;
-      right: 28%;
+      padding: 50vh 60px;
+      right: 22.5%;
       transform: translateY(-50%);
       z-index: 150;
       cursor: pointer;
@@ -121,7 +121,7 @@
 
       @media screen and (max-width:800px) {
         right: 0;
-        padding: 16px 8px;
+        padding: 50vh 8px;
 
         .icon {
           font-size: 36px;
@@ -132,8 +132,8 @@
     .fv-nav-prev {
       position: absolute;
       top: 50%;
-      padding: 48px;
-      left: 28%;
+      padding: 50vh 60px;
+      left: 22.5%;
       transform: translateY(-50%);
       z-index: 150;
       cursor: pointer;
@@ -146,7 +146,7 @@
 
       @media screen and (max-width:800px) {
         left: 0;
-        padding: 16px 8px;
+        padding: 50vh 8px;
 
         .icon {
           font-size: 36px;
@@ -159,21 +159,25 @@
       color: #fff;
       font-size: 16px;
       letter-spacing: 2px;
-      bottom: 5%;
+      bottom: 0;
+      line-height: 5vh;
       left: 50%;
       transform: translateX(-50%);
     }
 
     .fv-nav-close {
       position: absolute;
-      top: 10%;
-      right: 16px;
+      top: 5%;
+      line-height: 40px;
+      right: 10%;
       color: #fff;
-      display: none;
+      display: block;
       z-index: 1500;
+      cursor: pointer;
 
       @media screen and (max-width:800px) {
-        display: block;
+        top: 5%;
+        right: 16px;
       }
     }
   }
@@ -185,6 +189,7 @@
     opacity: 0;
   }
   100% {
+    display: block;
     opacity: 1;
   }
 }
