@@ -666,17 +666,6 @@ code {
   position: relative;
   border: 3px solid #ccc;
   box-shadow: 0 0 0 1px #999; }
-  .iphone-mockup.gold {
-    border-color: #D8C9A2;
-    box-shadow: 0 0 0 1px #DBA000; }
-  .iphone-mockup .iphone-mockup-innner {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    border-radius: 30px;
-    overflow: hidden; }
   .iphone-mockup .iphone-mockup-shadow {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.03+0,0.09+100 */
     background: -moz-linear-gradient(-45deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.09) 100%);
@@ -697,6 +686,14 @@ code {
     margin: 10px 10px;
     left: 20%;
     z-index: 15; }
+  .iphone-mockup .iphone-mockup-innner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 30px;
+    overflow: hidden; }
   .iphone-mockup .iphone-mockup-display {
     width: 94%;
     height: 80%;
@@ -751,9 +748,8 @@ code {
     height: 7%;
     width: 2px;
     right: -5px;
-    background-color: #ccc;
     top: 18%;
-    border-right: 1px solid #999; }
+    border-right: 1px solid transparent; }
   .iphone-mockup .iphone-mockup-leftbutton1 {
     position: absolute;
     height: 3%;
@@ -762,7 +758,7 @@ code {
     left: -5px;
     background-color: #ccc;
     top: 9%;
-    border-left: 1px solid #999; }
+    border-left: 1px solid transparent; }
   .iphone-mockup .iphone-mockup-leftbutton2 {
     position: absolute;
     height: 7%;
@@ -771,7 +767,7 @@ code {
     left: -5px;
     background-color: #ccc;
     top: 18%;
-    border-left: 1px solid #999; }
+    border-left: 1px solid transparent; }
   .iphone-mockup .iphone-mockup-leftbutton3 {
     position: absolute;
     border-radius: 2px;
@@ -780,7 +776,16 @@ code {
     left: -5px;
     background-color: #ccc;
     top: 28%;
-    border-left: 1px solid #999; }
+    border-left: 1px solid transparent; }
+  .iphone-mockup .iphone-mockup-rightbutton, .iphone-mockup .iphone-mockup-leftbutton1, .iphone-mockup .iphone-mockup-leftbutton2, .iphone-mockup .iphone-mockup-leftbutton3 {
+    background-color: #eee;
+    border-color: #999; }
+  .iphone-mockup.gold {
+    border-color: #D8C9A2;
+    box-shadow: 0 0 0 1px #898476; }
+    .iphone-mockup.gold .iphone-mockup-rightbutton, .iphone-mockup.gold .iphone-mockup-leftbutton1, .iphone-mockup.gold .iphone-mockup-leftbutton2, .iphone-mockup.gold .iphone-mockup-leftbutton3 {
+      background-color: #FCF2D9;
+      border-color: #898476; }
 
 .fluffy-viewer {
   font-size: 0; }
