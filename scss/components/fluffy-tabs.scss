@@ -1,0 +1,164 @@
+.fluffy-tabs {
+
+  &.scrollable {
+    .fluffy-tabs-nav {
+      white-space: nowrap;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      position: relative;
+    }
+  }
+
+  .fluffy-tabs-nav {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+
+
+
+    .fluffy-tabs-nav-inner {
+      width: 100%;
+      max-width: 1080px;
+      margin: auto;
+      padding: 0;
+      font-size: 0;
+    }
+    a {
+      letter-spacing: 1px;
+      padding: 12px 20px;
+      font-size: 13px;
+      color: #757575;
+      text-align: center;
+      display: inline-block;
+    }
+  }
+  .fluffy-tabs-link {
+    cursor: pointer;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 2px;
+      width: 0%;
+      background-color: #333;
+    }
+
+    &:hover, &.active {
+      &:after {
+        width: 100%;
+        animation: appear-bar 0.3s;
+      }
+    }
+
+    &.active {
+      font-weight: bold;
+    }
+  }
+}
+
+.fluffy-tabs-contents {
+  width: 100%;
+  max-width: 1080px;
+  margin: auto;
+  padding: 16px 0;
+  background-color: #fff;
+}
+
+.fluffy-tabs-content {
+  display: none;
+
+  &.active {
+    animation: fade-in-left 1s;
+    opacity: 1;
+    display: block;
+  }
+}
+
+
+@keyframes fade-in-left {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes appear-bar {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:800px) {
+  .fluffy-tabs {
+    .fluffy-tabs-nav {
+      .fluffy-tabs-nav-inner {
+        padding: 0;
+      }
+      a {
+        width: 50%;
+        letter-spacing: 1px;
+        padding: 12px 12px;
+        font-size: 10px;
+        color: #757575;
+        text-align: center;
+        display: inline-block;
+      }
+    }
+    .fluffy-tabs-link {
+      cursor: pointer;
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 2px;
+        width: 0%;
+        background-color: #333;
+      }
+
+      &:hover, &.active {
+        &:after {
+          width: 100%;
+          animation: appear-bar 0.3s;
+        }
+      }
+
+      &.active {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .fluffy-tabs-contents {
+    width: 100%;
+    max-width: 1080px;
+    margin: auto;
+    padding: 8px 2px;
+  }
+
+  .fluffy-tabs-content {
+    display: none;
+
+    &.active {
+      animation: fade-in-left 1s;
+      opacity: 1;
+      display: block;
+    }
+  }
+}
