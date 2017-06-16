@@ -88,7 +88,7 @@
     }
 
     &.blur {
-      @include setPrefix(filter, blur(300px));
+      @include setPrefix(filter, blur(0px));
 
       &.appeared {
         top: 50%;

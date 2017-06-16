@@ -460,10 +460,10 @@ code {
         animation: dialog-turn-big .8s;
         display: block; }
     .dialog-wrapper .dialog.blur {
-      filter: blur(300px);
-      -moz-filter: blur(300px);
-      -webkit-filter: blur(300px);
-      -o-filter: blur(300px); }
+      filter: blur(0px);
+      -moz-filter: blur(0px);
+      -webkit-filter: blur(0px);
+      -o-filter: blur(0px); }
       .dialog-wrapper .dialog.blur.appeared {
         top: 50%;
         opacity: 1;
