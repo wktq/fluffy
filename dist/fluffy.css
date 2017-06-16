@@ -414,6 +414,7 @@ code {
     background-color: #fff;
     z-index: 80;
     opacity: 0;
+    display: none;
     transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
@@ -427,32 +428,47 @@ code {
       top: 10px;
       right: 12px;
       cursor: pointer;
-      line-height: 1; }
+      line-height: 1;
+      z-index: 100; }
       .dialog-wrapper .dialog .dialog-close-button .icon {
         font-size: 20px;
         margin: 0; }
     .dialog-wrapper .dialog.appeared {
       top: 50%;
       opacity: 1;
-      animation: dialog-default .8s; }
+      animation: dialog-default .8s;
+      display: block; }
     .dialog-wrapper .dialog.fade {
       top: 50%; }
       .dialog-wrapper .dialog.fade.appeared {
         top: 50%;
         opacity: 1;
-        animation: none; }
+        animation: none;
+        display: block; }
     .dialog-wrapper .dialog.turn {
       top: 45%; }
       .dialog-wrapper .dialog.turn.appeared {
         top: 50%;
         opacity: 1;
-        animation: dialog-turn .8s; }
+        animation: dialog-turn .8s;
+        display: block; }
     .dialog-wrapper .dialog.turn-big {
       top: 45%; }
       .dialog-wrapper .dialog.turn-big.appeared {
         top: 50%;
         opacity: 1;
-        animation: dialog-turn-big .8s; }
+        animation: dialog-turn-big .8s;
+        display: block; }
+    .dialog-wrapper .dialog.blur {
+      filter: blur(300px);
+      -moz-filter: blur(300px);
+      -webkit-filter: blur(300px);
+      -o-filter: blur(300px); }
+      .dialog-wrapper .dialog.blur.appeared {
+        top: 50%;
+        opacity: 1;
+        animation: dialog-blur .3s;
+        display: block; }
 
 @keyframes dialog-default {
   0% {
@@ -487,6 +503,22 @@ code {
     top: 50%;
     opacity: 1;
     transform: translate(-50%, -50%) perspective(100rem) rotateX(0deg) rotateY(0deg); } }
+
+@keyframes dialog-blur {
+  0% {
+    top: 50%;
+    opacity: 0;
+    filter: blur(300px);
+    -moz-filter: blur(300px);
+    -webkit-filter: blur(300px);
+    -o-filter: blur(300px); }
+  100% {
+    top: 50%;
+    opacity: 1;
+    filter: blur(0px);
+    -moz-filter: blur(0px);
+    -webkit-filter: blur(0px);
+    -o-filter: blur(0px); } }
 
 .pagination > li > a, .pagination > li > span {
   border: none !important;

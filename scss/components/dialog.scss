@@ -21,6 +21,7 @@
     background-color: #fff;
     z-index: 80;
     opacity: 0;
+    display: none;
 
     .dialog-content {
       padding: 16px;
@@ -34,6 +35,7 @@
       right: 12px;
       cursor: pointer;
       line-height: 1;
+      z-index: 100;
 
       .icon {
         font-size: 20px;
@@ -49,6 +51,7 @@
       top: 50%;
       opacity: 1;
       animation: dialog-default .8s;
+      display: block;
     }
 
     &.fade {
@@ -58,6 +61,7 @@
         top: 50%;
         opacity: 1;
         animation: none;
+        display: block;
       }
     }
 
@@ -68,6 +72,7 @@
         top: 50%;
         opacity: 1;
         animation: dialog-turn .8s;
+        display: block;
       }
     }
 
@@ -78,6 +83,18 @@
         top: 50%;
         opacity: 1;
         animation: dialog-turn-big .8s;
+        display: block;
+      }
+    }
+
+    &.blur {
+      @include setPrefix(filter, blur(300px));
+
+      &.appeared {
+        top: 50%;
+        opacity: 1;
+        animation: dialog-blur .3s;
+        display: block;
       }
     }
   }
@@ -128,5 +145,20 @@
     top: 50%;
     opacity: 1;
     transform: translate(-50%, -50%) perspective(100rem) rotateX(0deg) rotateY(0deg);
+  }
+}
+
+
+@keyframes dialog-blur {
+  0% {
+    top: 50%;
+    opacity: 0;
+    @include setPrefix(filter, blur(300px));
+  }
+
+  100% {
+    top: 50%;
+    opacity: 1;
+    @include setPrefix(filter, blur(0px));
   }
 }

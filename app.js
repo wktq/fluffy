@@ -51,6 +51,14 @@ $('.dialog-close-button').on('click', function() {
   }, 50);
 });
 
+$(document).on('click', '.dialog-close-button', function() {
+  var dialogId = $(this).parents('.dialog').data('dialogId');
+  $('.dialog').removeClass('appeared');
+  setTimeout(function() {
+    $('.dialog-wrapper').fadeOut();
+  }, 50);
+});
+
 $(document).on('click', function(e) {
   if (!$(e.target).closest('.dialog').length) {
     if (!$(e.target).closest('.dialog-button').length) {
