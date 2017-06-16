@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="./dist/fluffy.css">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Coda" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style media="screen">
@@ -127,7 +127,14 @@
                   <h5>Beautiful Modal made with Pure CSS3 Animation</h5>
                 </div>
                 <div class="col-md-12">
-                  <button class="btn red dialog-button" data-dialog-id="5">Open Modal</button>
+                  <h5>Defalt Dialog</h5>
+                  <button class="btn red dialog-button" data-dialog-id="1">Open Dialog</button>
+                  <h5>Simple Fade Dialog</h5>
+                  <button class="btn red dialog-button" data-dialog-id="fade">Open Dialog</button>
+                  <h5>Turning Dialog</h5>
+                  <button class="btn red dialog-button" data-dialog-id="turn">Open Dialog</button>
+                  <h5>Fairly Turning Dialog</h5>
+                  <button class="btn red dialog-button" data-dialog-id="turn-big">Open Dialog</button>
                 </div>
               </div>
               <div class="row" data-hash-content="popover">
@@ -169,10 +176,28 @@
           Download & CDN
         </div>
       </div>
-      <div class="dialog card" data-dialog-id="5">
+      <div class="dialog card" data-dialog-id="1">
         <a class="dialog-close-button"><i class="icon ion-android-close"></i></a>
         <div class="dialog-content">
-          sdsd
+          This is defalut Dialog
+        </div>
+      </div>
+      <div class="dialog card fade" data-dialog-id="fade">
+        <a class="dialog-close-button"><i class="icon ion-android-close"></i></a>
+        <div class="dialog-content">
+          This is Fade Dialog(class="dialog fade")
+        </div>
+      </div>
+      <div class="dialog card turn" data-dialog-id="turn">
+        <a class="dialog-close-button"><i class="icon ion-android-close"></i></a>
+        <div class="dialog-content">
+          This is Turn Dialog(class="dialog turn")
+        </div>
+      </div>
+      <div class="dialog card turn-big" data-dialog-id="turn-big">
+        <a class="dialog-close-button"><i class="icon ion-android-close"></i></a>
+        <div class="dialog-content">
+          This is Turn Big Dialog(class="dialog turn-big")
         </div>
       </div>
     </div>

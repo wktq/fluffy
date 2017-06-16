@@ -109,17 +109,29 @@ hashContentChange();
 $('.dialog-button').on('click', function() {
   var dialogId = $(this).data('dialogId');
   $('.dialog-wrapper').fadeIn();
+
   setTimeout(function() {
-    $('.dialog[data-dialog-id]').addClass('appeared');
+    $('.dialog[data-dialog-id="' + dialogId + '"]').addClass('appeared');
   }, 50);
 });
 
 $('.dialog-close-button').on('click', function() {
   var dialogId = $(this).parents('.dialog').data('dialogId');
-  $('.dialog[data-dialog-id]').removeClass('appeared');
+  $('.dialog').removeClass('appeared');
   setTimeout(function() {
     $('.dialog-wrapper').fadeOut();
   }, 50);
+});
+
+$(document).on('click', function(e) {
+  if (!$(e.target).closest('.dialog').length) {
+    if (!$(e.target).closest('.dialog-button').length) {
+      $('.dialog').removeClass('appeared');
+      setTimeout(function() {
+        $('.dialog-wrapper').fadeOut();
+      }, 50);
+    }
+  }
 });
 
 //Drawer
