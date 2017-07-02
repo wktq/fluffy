@@ -125,6 +125,8 @@ $(document).ready(function() {
 
   hashContentChange();
 
+  // Dialog
+
   $('.dialog-button').on('click', function() {
     var dialogId = $(this).data('dialogId');
     $('.dialog-wrapper').fadeIn();
