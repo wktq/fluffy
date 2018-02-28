@@ -23,6 +23,7 @@ $set-prefix: '' , -moz- , -webkit-, -o-;
 @import './components/iphone-mockup.scss';
 @import './components/fluffy-viewer.scss';
 @import './components/fluffy-tabs.scss';
+@import './components/dropdown.scss';
 
 body {
   color: #353535;
