@@ -350,9 +350,17 @@ $(document).ready(function() {
 
   $(document).on('click', '.dropdown-button', function() {
     var leftOffset = $(this).offset().left;
+    var rightOffset = $(this).offset().right;
     var bottomOffset = $(this).offset().bottom;
+    var child = $(this).parents('.dropdown').find('.dropdown-child');
+
     $(this).parents('.dropdown').toggleClass('active');
-    $(this).parents('.dropdown-child').css('left', leftOffset);
-    $(this).parents('.dropdown-child').css('top', bottomOffset);
+
+    if ((jQuery(window).width() - leftOffset) < 200) {
+      child.css('right', jQuery(window).width() - leftOffset - $(this).parents('.dropdown').width());
+    } else {
+      child.css('left', leftOffset);
+    }
+    child.css('top', bottomOffset);
   });
 });
