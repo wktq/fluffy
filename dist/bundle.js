@@ -397,6 +397,12 @@ $(document).ready(function() {
         }
       }
     }
+
+    if (!$(e.target).closest('.dropdown-button').length) {
+      if (!$(e.target).closest('.dropdown-child').length) {
+        $('.dropdown').removeClass('active');
+      }
+    }
   });
 
   document.onkeydown = function(e) {
@@ -421,8 +427,6 @@ $(document).ready(function() {
     $(this).parents('.dropdown-child').css('left', leftOffset);
     $(this).parents('.dropdown-child').css('top', bottomOffset);
   });
-
-
 });
 
 
