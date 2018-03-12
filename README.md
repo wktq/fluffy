@@ -5,8 +5,11 @@ It works just below code.
 
 ```
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdn.rawgit.com/wktq/fluffy/ebfee074/dist/fluffy.css">
+<link rel="stylesheet" href="https://rawgit.com/wktq/fluffy/master/dist/fluffy.css">
 <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://rawgit.com/wktq/fluffy/master/dist/bundle.js"></script>
 ```
 
 [**get the code on github**](https://github.com/wktq/fluffy)
