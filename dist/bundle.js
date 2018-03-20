@@ -463,19 +463,38 @@ $(document).ready(function() {
 
     setTimeout(function(){
       $('#' + toastId).addClass('appeared');
+      if ($('#' + toastId).attr('data-appeared') > 0) {
+        var appearedNum = Number($('#' + toastId).attr('data-appeared'));
+        $('#' + toastId).attr('data-appeared', appearedNum + 1);
+      } else {
+        $('#' + toastId).attr('data-appeared', 1);
+      }
     },100);
 
     setTimeout(function(){
-      if ($('#' + toastId).hasClass('appeared')) {
-        $('#' + toastId).removeClass('appeared');
+      var appearedNum = Number($('#' + toastId).attr('data-appeared'));
+
+      if (appearedNum == 1) {
+        if ($('#' + toastId).hasClass('appeared')) {
+          $('#' + toastId).removeClass('appeared');
+          $('#' + toastId).attr('data-appeared', 0);
+        }
+      } else {
+        if ($('#' + toastId).hasClass('appeared')) {
+          $('#' + toastId).attr('data-appeared', appearedNum - 1);
+        }
       }
+
     },5000);
   });
 
   $(document).on('click', '.fluffy-toast .ion-close', function(e) {
     var toast = $(this).parents('.fluffy-toast');
-    
-    toast.removeClass('appeared');
+
+    if ($('#' + toastId).hasClass('appeared')) {
+      $('#' + toastId).removeClass('appeared');
+      $('#' + toastId).attr('data-appeared', 0);
+    }
   });
 });
 
