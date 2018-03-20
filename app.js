@@ -379,4 +379,30 @@ $(document).ready(function() {
     child.css('top', bottomOffset);
     child.css('z-index', 10000);
   });
+
+  // Fluffy toast
+  $(document).on('click', '.fluffy-toast-add', function(e) {
+    var toastText = $(this).data('ftsText');
+    var toastId = $(this).data('ftsId');
+
+    if ($('#' + toastId).length == 0) {
+      $('html body').append('<span id="' + toastId + '" class="fluffy-toast">' + toastText + '<i class="ion-close"></i></span>')
+    }
+
+    setTimeout(function(){
+      $('#' + toastId).addClass('appeared');
+    },100);
+
+    setTimeout(function(){
+      if ($('#' + toastId).hasClass('appeared')) {
+        $('#' + toastId).removeClass('appeared');
+      }
+    },5000);
+  });
+
+  $(document).on('click', '.fluffy-toast .ion-close', function(e) {
+    var toast = $(this).parents('.fluffy-toast');
+    
+    toast.removeClass('appeared');
+  });
 });

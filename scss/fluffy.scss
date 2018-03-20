@@ -24,6 +24,7 @@ $set-prefix: '' , -moz- , -webkit-, -o-;
 @import './components/fluffy-viewer.scss';
 @import './components/fluffy-tabs.scss';
 @import './components/dropdown.scss';
+@import './components/toast.scss';
 
 body {
   color: #353535;
