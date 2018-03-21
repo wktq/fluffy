@@ -1,0 +1,37 @@
+{
+  "name": "fluffy",
+  "version": "0.1.1",
+  "description": "Additional style utilities for Bootstrap and Light JS Libraries.",
+  "main": "webpack.config.js",
+  "dependencies": {},
+  "devDependencies": {
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.7",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wktq/fluffy.git"
+  },
+  "keywords": [
+    "CSS",
+    "Modern",
+    "Library",
+    "modal",
+    "toast",
+    "dropdown",
+    "bootstrap"
+  ],
+  "author": "wktq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wktq/fluffy/issues"
+  },
+  "homepage": "https://github.com/wktq/fluffy#readme"
+}
