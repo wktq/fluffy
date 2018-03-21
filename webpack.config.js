@@ -1,31 +1,41 @@
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+// 開発環境によって切り分ける際に使用するための定数を定義
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+const ENV = 'development';
+const userSourceMap = (ENV === 'development');
 
 module.exports = {
   entry: ['./app.js', './scss/fluffy.scss'],
-  output: {
-    filename: 'dist/bundle.js'
-  },
+  mode: ENV,
   module: {
     rules: [
       {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract({
-          loader: 'css-loader?importLoaders=1',
+        test: /\.scss/, // 対象となるファイルの拡張子
+        use: ExtractTextPlugin.extract({
+          use:
+            [
+            {
+              loader: 'css-loader',
+              options: {
+                url: false,
+                sourceMap: userSourceMap,
+                importLoaders: 2
+              },
+            },
+            {
+              loader: 'sass-loader',
+              options: {
+                // ソースマップの利用有無
+                sourceMap: userSourceMap,
+              }
+            }
+          ]
         }),
-        options: {
-          includePath: "./css/plain_css.css"
-        }
       },
-      {
-        test: /\.(sass|scss)$/,
-        loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
-      }
-    ]
+    ],
   },
+
   plugins: [
-    new ExtractTextPlugin({
-      filename: 'dist/fluffy.css',
-      allChunks: true,
-    }),
+    new ExtractTextPlugin('fluffy.css'),
   ],
 };
