@@ -5,7 +5,6 @@ const ENV = 'development';
 const userSourceMap = (ENV === 'development');
 
 module.exports = {
-  entry: ['./app.js', './scss/fluffy.scss'],
   mode: ENV,
   module: {
     rules: [

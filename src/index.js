@@ -289,7 +289,7 @@ $(document).ready(function() {
     }
   }
 
-  fvAllowed = true;
+  var fvAllowed = true;
 
   $(document).on('click', '.fv-nav-next', function() {
     console.log(fvAllowed);
